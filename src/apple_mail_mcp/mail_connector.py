@@ -205,14 +205,33 @@ class AppleMailConnector:
             status = "true" if read_status else "false"
             conditions.append(f"read status is {status}")
 
-        whose_clause = " and ".join(conditions) if conditions else "true"
-        limit_clause = f"items 1 thru {limit} of" if limit else ""
+        if conditions:
+            whose_clause = " and ".join(conditions)
+            all_messages_expr = f"(messages of mailboxRef whose {whose_clause})"
+        else:
+            all_messages_expr = "(messages of mailboxRef)"
+
+        if limit:
+            limit_block = f"""
+            set msgCount to count of allMessages
+            if msgCount is 0 then
+                return ""
+            end if
+            if {limit} < msgCount then
+                set matchedMessages to items 1 thru {limit} of allMessages
+            else
+                set matchedMessages to allMessages
+            end if"""
+        else:
+            limit_block = """
+            set matchedMessages to allMessages"""
 
         script = f"""
         tell application "Mail"
             set accountRef to account "{account_safe}"
             set mailboxRef to mailbox "{mailbox_safe}" of accountRef
-            set matchedMessages to {limit_clause} (messages of mailboxRef whose {whose_clause})
+            set allMessages to {all_messages_expr}
+            {limit_block}
 
             set resultList to {{}}
             repeat with msg in matchedMessages

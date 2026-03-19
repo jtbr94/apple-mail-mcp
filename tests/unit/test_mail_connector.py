@@ -104,6 +104,33 @@ class TestAppleMailConnector:
         assert result[0]["read_status"] is False
 
     @patch.object(AppleMailConnector, "_run_applescript")
+    def test_search_messages_no_filters_omits_whose(
+        self, mock_run: MagicMock, connector: AppleMailConnector
+    ) -> None:
+        """Test that search without filters does not generate 'whose' clause."""
+        mock_run.return_value = "12345|Test Subject|sender@example.com|Mon Jan 1 2024|false"
+
+        connector.search_messages("Gmail", "INBOX")
+
+        call_args = mock_run.call_args[0][0]
+        assert "whose" not in call_args
+
+    @patch.object(AppleMailConnector, "_run_applescript")
+    def test_search_messages_limit_clamps_to_message_count(
+        self, mock_run: MagicMock, connector: AppleMailConnector
+    ) -> None:
+        """Test that limit uses safe clamping instead of bare 'items 1 thru N'."""
+        mock_run.return_value = ""
+
+        connector.search_messages("Gmail", "INBOX", limit=50)
+
+        call_args = mock_run.call_args[0][0]
+        # Should count messages first and clamp, not use bare "items 1 thru 50"
+        assert "count" in call_args.lower()
+        # Should NOT have a bare "items 1 thru 50 of (messages" pattern
+        assert "items 1 thru 50 of (messages" not in call_args
+
+    @patch.object(AppleMailConnector, "_run_applescript")
     def test_search_messages_with_filters(
         self, mock_run: MagicMock, connector: AppleMailConnector
     ) -> None:
