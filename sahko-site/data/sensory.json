@@ -1,0 +1,86 @@
+{
+  "families": [
+    {
+      "id": "floral",
+      "label": "Floral",
+      "notes": [
+        "Hibiscus",
+        "Lavender",
+        "Jasmine"
+      ]
+    },
+    {
+      "id": "citrus",
+      "label": "Citrus",
+      "notes": [
+        "Meyer lemon",
+        "Pomelo",
+        "Persian lime",
+        "Bergamot"
+      ]
+    },
+    {
+      "id": "tropical",
+      "label": "Tropical",
+      "notes": [
+        "Pineapple",
+        "Passion fruit",
+        "Lychee"
+      ]
+    },
+    {
+      "id": "orchard",
+      "label": "Orchard fruit",
+      "notes": [
+        "Granny Smith",
+        "Yellow apricot",
+        "Honeydew"
+      ]
+    },
+    {
+      "id": "dried",
+      "label": "Dried fruit",
+      "notes": [
+        "Sultana",
+        "Date"
+      ]
+    },
+    {
+      "id": "cacao",
+      "label": "Cacao",
+      "notes": [
+        "Cocoa",
+        "Cacao nibs"
+      ]
+    },
+    {
+      "id": "nut",
+      "label": "Nut",
+      "notes": [
+        "Almond",
+        "Hazelnut"
+      ]
+    },
+    {
+      "id": "sweet",
+      "label": "Caramel & sweet",
+      "notes": [
+        "Demerara",
+        "Panela",
+        "Dulce de leche",
+        "Honey",
+        "Shortbread",
+        "Vanilla bean"
+      ]
+    },
+    {
+      "id": "tea",
+      "label": "Tea",
+      "notes": [
+        "Earl Grey"
+      ]
+    }
+  ],
+  "combine": "any",
+  "note": "Families are derived only from the tasting notes published on sahkocoffee.com. Descriptors, not ingredients."
+}

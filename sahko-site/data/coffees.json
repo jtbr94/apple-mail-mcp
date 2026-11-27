@@ -52,16 +52,28 @@
         "size": "250g",
         "amount": 1800,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       },
       {
         "size": "1kg",
         "amount": 5600,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       }
     ],
-    "model": ""
+    "origin": {
+      "country": "Brazil",
+      "region": "Cerrado, Minas Gerais"
+    },
+    "intro": "A clean, sun-dried natural that anchors espresso or rounds out a filter blend.",
+    "notes": [
+      "Cocoa",
+      "Sultana",
+      "Almond",
+      "Demerara"
+    ]
   },
   {
     "slug": "minas",
@@ -116,16 +128,29 @@
         "size": "250g",
         "amount": 1800,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       },
       {
         "size": "1kg",
         "amount": 5600,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       }
     ],
-    "model": ""
+    "origin": {
+      "country": "Brazil",
+      "region": "Sul de Minas, Minas Gerais"
+    },
+    "intro": "A creamy natural dried on the cherry, soft and sweet.",
+    "notes": [
+      "Hazelnut",
+      "Dulce de leche",
+      "Cocoa",
+      "Honey",
+      "Date"
+    ]
   },
   {
     "slug": "cauca",
@@ -181,16 +206,30 @@
         "size": "250g",
         "amount": 1800,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       },
       {
         "size": "1kg",
         "amount": 5600,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       }
     ],
-    "model": ""
+    "origin": {
+      "country": "Colombia",
+      "region": "Cauca"
+    },
+    "intro": "A high-altitude washed lot, clean across filter methods.",
+    "notes": [
+      "Cacao nibs",
+      "Pineapple",
+      "Panela",
+      "Hibiscus",
+      "Meyer lemon",
+      "Pomelo"
+    ]
   },
   {
     "slug": "antigua",
@@ -245,16 +284,30 @@
         "size": "250g",
         "amount": 1800,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       },
       {
         "size": "1kg",
         "amount": 5600,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       }
     ],
-    "model": ""
+    "origin": {
+      "country": "Guatemala",
+      "region": "San Cristobal el Bajo, Antigua"
+    },
+    "intro": "A classic washed Bourbon with a green-apple lift.",
+    "notes": [
+      "Demerara",
+      "Lavender",
+      "Cocoa",
+      "Granny Smith",
+      "Vanilla bean",
+      "Shortbread"
+    ]
   },
   {
     "slug": "guji",
@@ -310,16 +363,29 @@
         "size": "250g",
         "amount": 1800,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       },
       {
         "size": "1kg",
         "amount": 5600,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       }
     ],
-    "model": ""
+    "origin": {
+      "country": "Ethiopia",
+      "region": "Uraga, Guji Zone, Oromia"
+    },
+    "intro": "A bright washed Ethiopian built for filter brewing.",
+    "notes": [
+      "Yellow apricot",
+      "Passion fruit",
+      "Persian lime",
+      "Hibiscus",
+      "Earl Grey"
+    ]
   },
   {
     "slug": "yirgacheffe",
@@ -375,15 +441,29 @@
         "size": "250g",
         "amount": 1800,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       },
       {
         "size": "1kg",
         "amount": 5600,
         "stripePriceId": "",
-        "paymentLink": ""
+        "paymentLink": "",
+        "availability": "preorder"
       }
     ],
-    "model": ""
+    "origin": {
+      "country": "Ethiopia",
+      "region": "Yirgacheffe, Gedeo Zone"
+    },
+    "intro": "A floral washed heirloom from Gedeo.",
+    "notes": [
+      "Jasmine",
+      "Bergamot",
+      "Honeydew",
+      "Lychee",
+      "Hibiscus",
+      "Earl Grey"
+    ]
   }
 ]

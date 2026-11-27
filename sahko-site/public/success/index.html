@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Order confirmed – Sahkō</title>
 <meta name="description" content="Pre-order confirmed">
 <link rel="canonical" href="https://www.sahkocoffee.com/success/">
@@ -12,32 +12,33 @@
 <meta property="og:image" content="https://www.sahkocoffee.com/images/og.png">
 <meta property="og:url" content="https://www.sahkocoffee.com/success/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem('sahko-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}document.documentElement.classList.add('js');})();</script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400;500&display=swap">
 <link rel="stylesheet" href="/assets/styles.css">
 </head>
-<body class="info-page">
-<nav class="nav">
-  <a class="logo" href="/">Sahkō</a>
-  <p class="date" data-date aria-live="off"></p>
-  <div class="links"><a href="/" >Wholesale</a><a href="/information/" >Information</a></div>
-</nav>
-<main>
+<body class="text-page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="logo" href="/" aria-label="Sahkō home">Sahkō</a>
+  <p class="date" data-date></p>
+  <div class="nav-right">
+    <nav class="links" id="primary-nav" aria-label="Primary"><a href="/" >Collection</a><a href="/about/" >About</a><a href="/wholesale/" >Wholesale</a><a href="/contact/" >Contact</a></nav>
+    <button type="button" class="theme" data-theme-toggle aria-label="Switch to dark theme" title="Theme"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="7.5"/><path d="M12 4.5a7.5 7.5 0 0 1 0 15z" fill="currentColor" stroke="none"/></svg></button>
+    <button type="button" class="menu" data-menu aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="macron" aria-hidden="true"></span><span class="macron" aria-hidden="true"></span></button>
+  </div>
+</header>
+<main id="main">
 
-<article class="info success" data-success>
-  <div class="section"><h1 class="title">Thank you</h1></div>
-  <div class="section"><p class="prose" data-success-lead>Your pre-order is confirmed. A receipt is on its way to your inbox.</p></div>
-  <div class="section" data-success-items hidden></div>
-  <div class="section"><p class="prose">Pre-orders roast to order and ship within 10 days of the order date.</p></div>
-  <div class="section"><p><a href="/">Back to the coffees</a></p></div>
+<article class="page" data-success>
+  <header class="page-head"><p class="eyebrow"><span class="macron" aria-hidden="true"></span>Order confirmed</p><h1 class="display">Thank you.</h1></header>
+  <div class="page-body"><p class="prose" data-success-lead>Your pre-order is confirmed. A receipt is on its way to your inbox.</p><div data-success-items hidden></div><p class="prose muted">Pre-orders roast to order and ship within 10 days of the order date.</p><p><a class="inspect" href="/"><span class="macron" aria-hidden="true"></span>Back to the collection</a></p></div>
 </article>
 </main>
 
 <script src="/assets/site.js" defer></script>
-<script src="/assets/carousel.js" defer></script>
-<script type="importmap">{"imports":{"three":"/assets/vendor/three.module.js"}}</script>
-
 </body>
 </html>

@@ -22,9 +22,10 @@ const api = {
   '/api/checkout': require('../api/checkout.js'),
   '/api/session': require('../api/session.js'),
   '/api/webhook': require('../api/webhook.js'),
+  '/api/inquiry': require('../api/inquiry.js'),
 };
 
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.png': 'image/png', '.svg': 'image/svg+xml', '.json': 'application/json', '.ico': 'image/x-icon' };
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.png': 'image/png', '.svg': 'image/svg+xml', '.json': 'application/json', '.ico': 'image/x-icon', '.xml': 'application/xml', '.txt': 'text/plain', '.jpg': 'image/jpeg' };
 
 function serveStatic(pathname, res) {
   let file = path.normalize(path.join(publicDir, decodeURIComponent(pathname)));

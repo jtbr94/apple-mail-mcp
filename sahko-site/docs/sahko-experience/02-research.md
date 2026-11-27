@@ -1,0 +1,24 @@
+# 02 · Research matrix
+
+Access date for everything: 2026-11-27. The sandbox could not open the reference sites themselves (egress allow-list), so each row records what a web-search result said about the site, marked **snippet**, and separates that from my **inference**. Treat the snippets as third-party description, not as verified observation of the live pages.
+
+| Source | What the source says (snippet) | Why it matters for Sahkō | Independent translation | Do not copy |
+|---|---|---|---|---|
+| SEY Coffee, as described by boostifythemes.com | "ultra-minimal design uses soft colors, airy spacing, and elegant fonts to let the coffee take center stage" | Confirms the category benchmark: product first, UI nearly silent | Keep the ground empty around the bag; let the orbit be the only motion | Their layout, type, photography |
+| Ceremony Coffee, Blue Tokai (designrush.com) | three-column product grids; spec lists of roast, altitude, process, farm | The default pattern we must *not* fall into: the grid of cards | Specs stay, but as an exhibition card revealed on inspection, not a grid | Card grid, badge clutter |
+| Aesop (webdesignhot.com, fontalternatives.com, photoroom.com) | grotesque sans for almost everything at ~14 px regular weight; a serif reserved for the wordmark and rare display moments; copy in "full, unhurried sentences" | Sahkō already has exactly this pairing (PP Eiko serif wordmark, Modern Gothic light text). Validates keeping the serif rare | Serif only for wordmark and coffee name on inspection; 14 px body; complete sentences in descriptions | Aesop's palette, product photography style |
+| Byredo (photoroom.com, zarla.com) | "ruthless reduction, no banners, no persuasion"; sculptural photography; a macro ingredient backdrop behind the bottle | Inspiration for the Bean-to-Bag idea: the object recedes, the material (beans) comes forward | Roasted-bean macro as the second "view" of a coffee, crossfading behind the bag | Their compositions |
+| Le Labo (photoroom.com, contra.com) | identity rests on consistent packaging and hand-typed labels; restraint framed as leaving "space for memory" | The bag label *is* Sahkō's signature. Keep the small lower-left label; never enlarge it | Label stays photographic; the inspection card echoes the label's line order (Region, Varietal, Processing, Harvest, Acidity, Body, Lot) | Label typography |
+| Chrome developers: accessible carousels (developer.chrome.com, 2025) | focus management, announcements and off-screen interactive elements are the hard parts; native semantics first | The orbit must sit on top of a real list of links, with controls that have names and focus | Semantic `<ul>` of product links is the DOM; the orbit is presentation; one roving focus; `aria-live` for the active name | Scroll-snap carousels (we need an orbit, not a track) |
+| 3D carousel tutorials (sitepoint.com, creativebloq.com) | perspective on an ancestor; items at 360/N degrees; rotate the ring | Confirms the geometry approach but these are rings seen from the side or above | Front-view orbit: x = R·sinθ, depth = cosθ; scale/opacity from depth; bags stay upright (no item rotation around Y beyond a subtle yaw) | Rotating the whole ring (bags would tilt) |
+| View Transitions API vs FLIP (developer.chrome.com, aerotwist.com) | same-document view transitions snapshot old/new states; FLIP measures first/last and animates transform | Shared-element inspection can be done with either; View Transitions snapshot the bag as an image (loses live drag) and need Safari 18+ | FLIP with the Web Animations API on the *same* `<img>` element: no duplicate, cancellable, works everywhere | n/a |
+| Pangram Pangram / Klim licence pages | trial fonts are personal, non-commercial; web licences are separate products | "Modern Gothic Trial" on a commercial site is a licence risk | Document substitutes; recommend purchase before launch | n/a |
+| Japanese editorial / Leaves / GLITCH | no usable design description found in search results | Nothing to cite | My inference only: asymmetric placement, ample margin, one object per view, type as caption not headline | n/a |
+
+## Principles derived (inference)
+1. **One object per view.** The orbit shows neighbours, but only the front bag is fully present; the others are company, not choices.
+2. **Caption, not headline.** The coffee's name is set small on the stage and large only once you have chosen it.
+3. **The label is sacred.** Photographic label, lower-left, never redrawn by the UI.
+4. **Information arrives in the label's order.** The inspection card repeats the bag label's sequence so the physical and digital object agree.
+5. **Motion is placement.** Things move to where they belong (bag to the left column, lines into their slots). Nothing moves for decoration.
+6. **The macron is the only ornament.** A short horizontal rule, the width of the ō's macron scaled up, is the active indicator, the divider and the loading cue.

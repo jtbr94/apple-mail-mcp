@@ -6,12 +6,20 @@
   "locale": "en-US",
   "nav": [
     {
-      "label": "Wholesale",
+      "label": "Collection",
       "href": "/"
     },
     {
-      "label": "Information",
-      "href": "/information/"
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "Wholesale",
+      "href": "/wholesale/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
     }
   ],
   "preorder": {
@@ -31,13 +39,20 @@
     "wholesale": "For wholesale pricing, samples and standing orders, email us with your volumes and roast preferences.",
     "address": ""
   },
-  "carousel": {
-    "enabled": true,
-    "wheelGlide": true
+  "pricesVerified": false,
+  "experienceName": "The Coffee Atelier",
+  "positioning": "The art of origin.",
+  "about": {
+    "photo": "/images/about-harvest.jpg",
+    "photoAlt": "A picker reaching into coffee trees, from the Sahkō brand file",
+    "photoVerified": false,
+    "paragraphs": [
+      "Sahkō roasts single-origin coffee in small lots and publishes what it knows about each one: region, varietal, altitude, process, harvest, acidity, body, roast and lot number.",
+      "The collection is short on purpose. Six coffees, each chosen for a character that survives the roast and reads clearly in the cup."
+    ]
   },
-  "bags": {
-    "enabled": false,
-    "paperColor": "#ebe7df",
-    "labelColor": "#f7f5f3"
+  "wholesale": {
+    "intro": "For cafés, restaurants and retail partners. Tell us about your volumes, equipment and the profiles you pour and we will reply with samples and current availability.",
+    "email": "hello@sahkocoffee.com"
   }
 }

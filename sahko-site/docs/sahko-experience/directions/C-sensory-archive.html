@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C · Sensory Archive</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400&display=swap"><link rel="stylesheet" href="base.css">
+<style>
+.wrap{display:grid;grid-template-columns:380px 1fr;min-height:calc(100vh - 64px)}
+.reg{border-right:1px solid var(--line);padding:24px}
+.reg h2{font:300 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+.reg ul{margin:0;padding:0;list-style:none}.reg li{display:grid;grid-template-columns:1fr auto;padding:12px 0;border-top:1px solid var(--line)}
+.reg li.on .name{font:400 20px/1 var(--serif)}.reg .name{font-size:15px}.reg .fam{display:flex;gap:6px;align-items:center;color:var(--muted)}
+.ico{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.1}
+.modes{display:flex;gap:14px;margin-bottom:28px;color:var(--muted)}.modes b{font-weight:400;color:var(--fg);border-bottom:1.5px solid currentColor}
+.stage{position:relative;overflow:hidden}
+.bag{top:46%}
+.foot{position:absolute;left:24px;right:24px;bottom:24px;display:flex;justify-content:space-between;color:var(--muted)}
+@media(max-width:809px){.wrap{grid-template-columns:1fr}.reg{border-right:0;border-bottom:1px solid var(--line);order:2}.stage{height:420px}.bag{top:50%}}
+</style></head><body>
+<nav class="nav"><a class="logo" href="#">Sahkō</a><p class="center">Friday, November 27, 2026</p><div class="links"><a>Collection</a><a>About</a><a>Wholesale</a><a>Contact</a><a>Bag (0)</a></div></nav>
+<div class="wrap">
+<aside class="reg"><div class="modes"><b>Collection</b><span>Origin</span><span>Profile</span></div><h2>Register · 6 coffees</h2>
+<ul>
+<li><span class="name">Cerrado</span><span class="fam"><svg class="ico" viewBox="0 0 16 16"><path d="M3 9c0-3 2-5 5-5s5 2 5 5-2 4-5 4-5-1-5-4z"/></svg> cacao</span></li>
+<li><span class="name">Minas</span><span class="fam"><svg class="ico" viewBox="0 0 16 16"><path d="M8 2l5 4-1 7H4L3 6z"/></svg> nut</span></li>
+<li class="on"><span class="name">Cauca</span><span class="fam"><svg class="ico" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5"/><path d="M8 3v10M3 8h10"/></svg> citrus</span></li>
+<li><span class="name">Antigua</span><span class="fam"><svg class="ico" viewBox="0 0 16 16"><path d="M8 13c-3 0-5-2-5-5l5-5 5 5c0 3-2 5-5 5z"/></svg> apple</span></li>
+<li><span class="name">Guji</span><span class="fam"><svg class="ico" viewBox="0 0 16 16"><path d="M8 14V8M8 8C4 8 3 5 3 3c3 0 5 1 5 5zm0 0c4 0 5-3 5-5-3 0-5 1-5 5z"/></svg> tropical</span></li>
+<li><span class="name">Yirgacheffe</span><span class="fam"><svg class="ico" viewBox="0 0 16 16"><path d="M8 14V7M8 7c-2 0-4-2-4-4 2 0 4 1 4 4zm0 0c2 0 4-2 4-4-2 0-4 1-4 4z"/><circle cx="8" cy="4" r="1.2"/></svg> floral</span></li>
+</ul></aside>
+<section class="stage">
+  <div class="bag" style="--w:380px;--x:-380px;--s:.62;--o:.4;--b:1px"><img src="../../../public/images/minas-bag.png" alt=""></div>
+  <div class="bag" style="--w:380px;--x:-200px;--s:.8;--o:.7"><img src="../../../public/images/guji-bag.png" alt=""></div>
+  <div class="bag" style="--w:380px;--x:0px;--s:1;--o:1"><img src="../../../public/images/cauca-bag.png" alt="Cauca"><div class="shadow"></div></div>
+  <div class="bag" style="--w:380px;--x:200px;--s:.8;--o:.7"><img src="../../../public/images/yirgacheffe-bag.png" alt=""></div>
+  <div class="bag" style="--w:380px;--x:380px;--s:.62;--o:.4;--b:1px"><img src="../../../public/images/cerrado-bag.png" alt=""></div>
+  <div class="foot"><span>Cauca · Colombia · Washed</span><span>← 3 / 6 →</span></div>
+</section>
+</div>
+</body></html>

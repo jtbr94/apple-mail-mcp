@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>B · Spatial Object Atelier</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400&display=swap"><link rel="stylesheet" href="base.css">
+<style>
+body{height:100vh;overflow:hidden}
+.stage{position:relative;height:calc(100vh - 64px)}
+.bag{top:52%}
+.plinth{position:absolute;left:50%;bottom:16%;width:72%;height:1px;background:var(--line);transform:translateX(-50%)}
+.plate{position:absolute;left:24px;bottom:24px;max-width:360px}
+.plate .n{font:400 32px/1 var(--serif);letter-spacing:-.03em;margin-bottom:10px}
+.plate .m{color:var(--muted)}
+.plate .cta{margin-top:18px;display:inline-flex;align-items:center;gap:10px}
+.mode{position:absolute;right:24px;bottom:24px;display:flex;gap:16px;color:var(--muted)}
+.mode b{font-weight:400;color:var(--fg);border-bottom:1.5px solid currentColor;padding-bottom:2px}
+.arrows{position:absolute;top:50%;left:24px;right:24px;display:flex;justify-content:space-between;transform:translateY(-50%);color:var(--muted);font-size:18px}
+.idx{position:absolute;top:24px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
+.idx i{display:block;width:14px;height:1.5px;background:var(--line)}.idx i.on{background:var(--fg);width:28px}
+@media(max-width:809px){.bag{top:40%}.plate{left:20px;right:20px;bottom:76px;max-width:none}.plate .n{font-size:26px}.mode{left:20px;right:auto;bottom:24px}.arrows{display:none}}
+</style></head><body>
+<nav class="nav"><a class="logo" href="#">Sahkō</a><p class="center">Friday, November 27, 2026</p><div class="links"><a>Collection</a><a>About</a><a>Wholesale</a><a>Contact</a><a>Bag (0)</a></div></nav>
+<section class="stage" aria-label="Collection">
+  <div class="idx"><i></i><i></i><i class="on"></i><i></i><i></i><i></i></div>
+  <div class="plinth"></div>
+  <div class="bag" style="--w:440px;--x:-560px;--s:.5;--o:.28;--b:1.5px"><img src="../../../public/images/antigua-bag.png" alt=""></div>
+  <div class="bag" style="--w:440px;--x:-340px;--s:.7;--o:.6;--b:.5px"><img src="../../../public/images/guji-bag.png" alt=""></div>
+  <div class="bag" style="--w:440px;--x:0px;--s:1;--o:1"><img src="../../../public/images/cauca-bag.png" alt="Cauca"><div class="shadow"></div></div>
+  <div class="bag" style="--w:440px;--x:340px;--s:.7;--o:.6;--b:.5px"><img src="../../../public/images/yirgacheffe-bag.png" alt=""></div>
+  <div class="bag" style="--w:440px;--x:560px;--s:.5;--o:.28;--b:1.5px"><img src="../../../public/images/cerrado-bag.png" alt=""></div>
+  <div class="arrows"><span>←</span><span>→</span></div>
+  <div class="plate"><p class="n">Cauca</p><p class="m">Cauca, Colombia · Washed · Organic</p><p class="m">Cacao nibs, pineapple, hibiscus</p><p class="cta"><span class="macron"></span> Inspect</p></div>
+  <div class="mode"><b>Collection</b><span>Origin</span><span>Profile</span></div>
+</section>
+</body></html>

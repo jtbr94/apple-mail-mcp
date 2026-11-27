@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sahkō</title>
-<meta name="description" content="Specialty Coffee">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sahkō – Specialty Coffee</title>
+<meta name="description" content="Specialty Coffee. The art of origin.">
 <link rel="canonical" href="https://www.sahkocoffee.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Sahkō">
-<meta property="og:description" content="Specialty Coffee">
+<meta property="og:title" content="Sahkō – Specialty Coffee">
+<meta property="og:description" content="Specialty Coffee. The art of origin.">
 <meta property="og:image" content="https://www.sahkocoffee.com/images/og.png">
 <meta property="og:url" content="https://www.sahkocoffee.com/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem('sahko-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}document.documentElement.classList.add('js');})();</script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,201 +21,269 @@
 <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body class="home">
-<nav class="nav">
-  <a class="logo" href="/">Sahkō</a>
-  <p class="date" data-date aria-live="off"></p>
-  <div class="links"><a href="/" class="current" aria-current="page">Wholesale</a><a href="/information/" >Information</a></div>
-</nav>
-<main>
-
-<div class="carousel" data-carousel>
-  <div class="track" data-track aria-roledescription="carousel" aria-label="Our coffees" tabindex="0">
-<section class="coffee slide" id="cerrado" data-slug="cerrado" data-index="0" aria-roledescription="slide" aria-label="1 of 6: Cerrado">
-  <header class="head">
-    <h1 class="title">Cerrado</h1>
-    <div class="tags"><span class="pill">Natural</span><span class="pill">Single Origin</span></div>
-  </header>
-  <div class="media" data-bag="cerrado">
-    <img class="fallback" src="/images/cerrado-bag.png" width="1024" height="1024" alt="Cerrado 1kg bag" loading="eager" decoding="async">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="logo" href="/" aria-label="Sahkō home">Sahkō</a>
+  <p class="date" data-date></p>
+  <div class="nav-right">
+    <nav class="links" id="primary-nav" aria-label="Primary"><a href="/" aria-current="page">Collection</a><a href="/about/" >About</a><a href="/wholesale/" >Wholesale</a><a href="/contact/" >Contact</a></nav>
+    <button type="button" class="theme" data-theme-toggle aria-label="Switch to dark theme" title="Theme"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="7.5"/><path d="M12 4.5a7.5 7.5 0 0 1 0 15z" fill="currentColor" stroke="none"/></svg></button>
+    <button type="button" class="menu" data-menu aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="macron" aria-hidden="true"></span><span class="macron" aria-hidden="true"></span></button>
   </div>
-  <div class="body">
-    <div class="specs"><p>Region: Cerrado, Minas Gerais, Brazil</p><p>Varietal: Mundo Novo, Catuai Red &amp; Yellow, Topazio, Catucai, Acaia</p><p>Altitude: 1,200 masl</p><p>Processing: Natural</p><p>Harvest: Jul–Sep 2025</p><p>Acidity: Medium</p><p>Body: Light</p><p>Roast: Full City</p></div>
-    <p class="more"><a href="/wholesale/cerrado/">Learn More</a></p>
+</header>
+<main id="main">
+
+<section class="scene" data-scene data-state="browsing" aria-label="The collection">
+  <div class="stage" data-stage>
+    <ol class="indicator" data-indicator aria-hidden="true"><li class="on"></li><li ></li><li ></li><li ></li><li ></li><li ></li></ol>
+    <div class="plinth" aria-hidden="true"></div>
+    <ul class="orbit" data-orbit aria-label="Coffees" aria-roledescription="carousel">
+<li class="bag" data-slug="cerrado" data-index="0" style="--x:0px;--y:0px;--s:1;--o:1;--z:1;--blur:0px">
+  <a class="bag-link" href="/coffee/cerrado/" aria-label="Cerrado" aria-current="true" data-inspect="cerrado">
+    <img class="bag-img" src="/images/cerrado-bag.png" width="1024" height="1024" alt="Cerrado bag" loading="eager" decoding="async" draggable="false">
+  </a>
+</li>
+<li class="bag" data-slug="minas" data-index="1" style="--x:0px;--y:0px;--s:1;--o:1;--z:1;--blur:0px">
+  <a class="bag-link" href="/coffee/minas/" aria-label="Minas" tabindex="-1" data-inspect="minas">
+    <img class="bag-img" src="/images/minas-bag.png" width="1024" height="1024" alt="Minas bag" loading="eager" decoding="async" draggable="false">
+  </a>
+</li>
+<li class="bag" data-slug="cauca" data-index="2" style="--x:0px;--y:0px;--s:1;--o:1;--z:1;--blur:0px">
+  <a class="bag-link" href="/coffee/cauca/" aria-label="Cauca" tabindex="-1" data-inspect="cauca">
+    <img class="bag-img" src="/images/cauca-bag.png" width="1024" height="1024" alt="Cauca bag" loading="eager" decoding="async" draggable="false">
+  </a>
+</li>
+<li class="bag" data-slug="antigua" data-index="3" style="--x:0px;--y:0px;--s:1;--o:1;--z:1;--blur:0px">
+  <a class="bag-link" href="/coffee/antigua/" aria-label="Antigua" tabindex="-1" data-inspect="antigua">
+    <img class="bag-img" src="/images/antigua-bag.png" width="1024" height="1024" alt="Antigua bag" loading="lazy" decoding="async" draggable="false">
+  </a>
+</li>
+<li class="bag" data-slug="guji" data-index="4" style="--x:0px;--y:0px;--s:1;--o:1;--z:1;--blur:0px">
+  <a class="bag-link" href="/coffee/guji/" aria-label="Guji" tabindex="-1" data-inspect="guji">
+    <img class="bag-img" src="/images/guji-bag.png" width="1024" height="1024" alt="Guji bag" loading="lazy" decoding="async" draggable="false">
+  </a>
+</li>
+<li class="bag" data-slug="yirgacheffe" data-index="5" style="--x:0px;--y:0px;--s:1;--o:1;--z:1;--blur:0px">
+  <a class="bag-link" href="/coffee/yirgacheffe/" aria-label="Yirgacheffe" tabindex="-1" data-inspect="yirgacheffe">
+    <img class="bag-img" src="/images/yirgacheffe-bag.png" width="1024" height="1024" alt="Yirgacheffe bag" loading="lazy" decoding="async" draggable="false">
+  </a>
+</li></ul>
+    <button type="button" class="arrow prev" data-prev aria-label="Previous coffee"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+    <button type="button" class="arrow next" data-next aria-label="Next coffee"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>
+  <div class="plate">
+    <p class="plate-name" data-plate-name>Cerrado</p>
+    <p class="plate-origin muted" data-plate-origin>Cerrado, Minas Gerais, Brazil · Natural</p>
+    <p class="plate-notes muted" data-plate-notes>Cocoa, Sultana, Almond</p>
+    <a class="inspect" data-plate-link data-inspect="cerrado" href="/coffee/cerrado/"><span class="macron" aria-hidden="true"></span>Inspect</a>
+    <p class="visually-hidden" aria-live="polite" data-live></p>
+  </div>
+  <div class="modes" role="group" aria-label="Discover by">
+    <button type="button" class="mode" data-mode="collection" aria-pressed="true">Collection</button>
+    <button type="button" class="mode" data-mode="origin" aria-pressed="false">Origin</button>
+    <button type="button" class="mode" data-mode="profile" aria-pressed="false">Profile</button>
+  </div>
+  <div class="filters" data-filters hidden>
+    <div class="filter-row" data-filter-row="origin" hidden><button type="button" class="filter" data-filter="origin" data-value="Brazil" aria-pressed="false">Brazil <span class="muted">2</span></button><button type="button" class="filter" data-filter="origin" data-value="Colombia" aria-pressed="false">Colombia <span class="muted">1</span></button><button type="button" class="filter" data-filter="origin" data-value="Guatemala" aria-pressed="false">Guatemala <span class="muted">1</span></button><button type="button" class="filter" data-filter="origin" data-value="Ethiopia" aria-pressed="false">Ethiopia <span class="muted">2</span></button></div>
+    <div class="filter-row" data-filter-row="profile" hidden><button type="button" class="filter" data-filter="profile" data-value="floral" aria-pressed="false"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(0 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(72 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(144 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(216 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(288 12 12)"/><circle cx="12" cy="12" r="1.5"/></svg><span>Floral</span></button><button type="button" class="filter" data-filter="profile" data-value="citrus" aria-pressed="false"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 12V4M12 12l6.9 4M12 12l-6.9 4"/><circle cx="12" cy="12" r="5.2" stroke-dasharray="1.5 2.4"/></svg><span>Citrus</span></button><button type="button" class="filter" data-filter="profile" data-value="tropical" aria-pressed="false"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6.5 2.2-10.8 6.5-13.5-1 5.8-3.2 10.3-6.5 13.5z"/><path d="M12 21c0-6.5-2.2-10.8-6.5-13.5 1 5.8 3.2 10.3 6.5 13.5z"/><path d="M12 21V3"/></svg><span>Tropical</span></button><button type="button" class="filter" data-filter="profile" data-value="orchard" aria-pressed="false"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.6c-3.2-2.2-7.4-.2-7.4 4.4C4.6 16.6 8 21 12 21s7.4-4.4 7.4-9c0-4.6-4.2-6.6-7.4-4.4z"/><path d="M12 7.6c0-2.2 1.1-3.8 3.2-4.6"/></svg><span>Orchard fruit</span></button><button type="button" class="filter" data-filter="profile" data-value="dried" aria-pressed="false"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="8.2" ry="5" transform="rotate(-24 12 12)"/><path d="M9.4 9.6c.9 1.2.9 3.4 0 4.8M13.6 8.6c1.1 1.8 1.1 5 0 6.8"/></svg><span>Dried fruit</span></button><button type="button" class="filter" data-filter="profile" data-value="cacao" aria-pressed="false"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4.2 2 6.2 6 6.2 9s-2 7-6.2 9c-4.2-2-6.2-6-6.2-9s2-7 6.2-9z"/><path d="M12 3v18M8.6 7.2c-1 3-1 6.6 0 9.6M15.4 7.2c1 3 1 6.6 0 9.6"/></svg><span>Cacao</span></button><button type="button" class="filter" data-filter="profile" data-value="nut" aria-pressed="false"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.3 3.2 5.2 7.2 5.2 11.2a5.2 5.2 0 0 1-10.4 0C6.8 10.2 8.7 6.2 12 3z"/><path d="M12 6.4v9.2"/></svg><span>Nut</span></button><button type="button" class="filter" data-filter="profile" data-value="sweet" aria-pressed="false"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.2 12 4.4l7.5 3.8L12 12 4.5 8.2z"/><path d="M4.5 8.2v7.6L12 19.6l7.5-3.8V8.2"/><path d="M12 12v7.6"/></svg><span>Caramel &amp; sweet</span></button><button type="button" class="filter" data-filter="profile" data-value="tea" aria-pressed="false"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.4 4.6c-8.4 0-13.6 4.2-14.8 12.8 8.4 0 13.6-4.2 14.8-12.8z"/><path d="M4.6 17.4c3-5.2 7-8.6 11.6-10.6"/></svg><span>Tea</span></button><button type="button" class="filter clear" data-clear hidden>Clear</button></div>
+    <p class="filter-count muted" data-filter-count></p>
+  </div>
+  <div class="inspection" data-inspection hidden>
+    <a class="back" data-back href="/#cerrado"><span class="macron" aria-hidden="true"></span>Collection</a>
     
+<article class="detail" data-detail="cerrado" id="detail-cerrado" hidden aria-labelledby="name-cerrado">
+  <div class="detail-media">
+    <figure class="slot" data-slot></figure>
+    <figure class="beans" data-beans><img src="/images/cerrado-beans.png" width="1024" height="1024" alt="Cerrado roasted beans" loading="lazy" decoding="async"></figure>
+    <div class="views" role="group" aria-label="View">
+      <button type="button" class="view" data-view="bag" aria-pressed="true">Bag</button>
+      <button type="button" class="view" data-view="beans" aria-pressed="false">Roasted beans</button>
+    </div>
+  </div>
+  <div class="detail-info">
+    <p class="eyebrow" data-reveal data-decode><span class="macron" aria-hidden="true"></span><span class="decode" data-text="No. 01 / 06 · Lot CER01N–25">No. 01 / 06 · Lot CER01N–25</span></p>
+    <h1 class="name" id="name-cerrado" data-reveal tabindex="-1">Cerrado</h1>
+    <p class="intro" data-reveal>A clean, sun-dried natural that anchors espresso or rounds out a filter blend.</p>
+    <p class="origin" data-reveal>Cerrado, Minas Gerais, Brazil · Natural</p>
+    <ul class="tags" aria-label="Character" data-reveal><li class="pill">Natural</li><li class="pill">Single Origin</li></ul>
+    <dl class="specs"><div class="spec" data-reveal><dt>Region</dt><dd>Cerrado, Minas Gerais, Brazil</dd></div><div class="spec" data-reveal><dt>Varietal</dt><dd>Mundo Novo, Catuai Red &amp; Yellow, Topazio, Catucai, Acaia</dd></div><div class="spec" data-reveal><dt>Altitude</dt><dd>1,200 masl</dd></div><div class="spec" data-reveal><dt>Processing</dt><dd>Natural</dd></div><div class="spec" data-reveal><dt>Harvest</dt><dd>Jul–Sep 2025</dd></div><div class="spec" data-reveal><dt>Acidity</dt><dd>Medium</dd></div><div class="spec" data-reveal><dt>Body</dt><dd>Light</dd></div><div class="spec" data-reveal><dt>Roast</dt><dd>Full City</dd></div></dl>
+    <p class="prose" data-reveal>A sun-grown natural from the Cerrado plateau. Smallholder lots cultivated on deep, well-drained latosol soils across savannah terrain. Defined wet and dry seasons and abundant sunlight allow uniform on-tree maturation and clean patio drying with fruit intact. Medium acidity, light body, clean natural profile that anchors espresso or rounds out a filter blend.</p>
+    <section class="notes" data-reveal aria-labelledby="notes-cerrado"><h2 id="notes-cerrado">Tasting notes</h2><ul class="notes-list"><li class="note" data-family="cacao"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4.2 2 6.2 6 6.2 9s-2 7-6.2 9c-4.2-2-6.2-6-6.2-9s2-7 6.2-9z"/><path d="M12 3v18M8.6 7.2c-1 3-1 6.6 0 9.6M15.4 7.2c1 3 1 6.6 0 9.6"/></svg><span>Cocoa</span></li><li class="note" data-family="dried"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="8.2" ry="5" transform="rotate(-24 12 12)"/><path d="M9.4 9.6c.9 1.2.9 3.4 0 4.8M13.6 8.6c1.1 1.8 1.1 5 0 6.8"/></svg><span>Sultana</span></li><li class="note" data-family="nut"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.3 3.2 5.2 7.2 5.2 11.2a5.2 5.2 0 0 1-10.4 0C6.8 10.2 8.7 6.2 12 3z"/><path d="M12 6.4v9.2"/></svg><span>Almond</span></li><li class="note" data-family="sweet"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.2 12 4.4l7.5 3.8L12 12 4.5 8.2z"/><path d="M4.5 8.2v7.6L12 19.6l7.5-3.8V8.2"/><path d="M12 12v7.6"/></svg><span>Demerara</span></li></ul></section>
+    <section class="purchase" data-reveal aria-label="Order">
 <form class="preorder" data-slug="cerrado" data-currency="usd" data-locale="en-US" novalidate>
-  <p class="preorder-title">Pre-order</p>
-  <div class="sizes" role="radiogroup" aria-label="Size"><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-price="$18.00" data-link="" checked><span class="pill pill-button">250g · $18.00</span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-price="$56.00" data-link="" ><span class="pill pill-button">1kg · $56.00</span></label></div>
+  <fieldset class="sizes"><legend class="visually-hidden">Size</legend><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-link="" checked ><span class="pill pill-button">250g <span class="muted">$18.00</span></span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-link=""  ><span class="pill pill-button">1kg <span class="muted">$56.00</span></span></label></fieldset>
   <div class="preorder-row">
-    <div class="qty" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button>
-      <input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button>
-    </div>
-    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="dot">·</span><span class="total">$18.00</span></button>
+    <div class="qty"><button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button><input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity"><button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button></div>
+    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="total">$18.00</span></button>
   </div>
-  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date.</p>
+  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date. <span class="proto">Prototype pricing, not a live offer.</span></p>
   <p class="preorder-error" role="alert" hidden></p>
-</form>
+</form></section>
   </div>
-</section>
+</article>
 
-<section class="coffee slide" id="minas" data-slug="minas" data-index="1" aria-roledescription="slide" aria-label="2 of 6: Minas">
-  <header class="head">
-    <h1 class="title">Minas</h1>
-    <div class="tags"><span class="pill">Natural</span><span class="pill">Single Origin</span></div>
-  </header>
-  <div class="media" data-bag="minas">
-    <img class="fallback" src="/images/minas-bag.png" width="1024" height="1024" alt="Minas 1kg bag" loading="eager" decoding="async">
+<article class="detail" data-detail="minas" id="detail-minas" hidden aria-labelledby="name-minas">
+  <div class="detail-media">
+    <figure class="slot" data-slot></figure>
+    <figure class="beans" data-beans><img src="/images/minas-beans.png" width="1024" height="1024" alt="Minas roasted beans" loading="lazy" decoding="async"></figure>
+    <div class="views" role="group" aria-label="View">
+      <button type="button" class="view" data-view="bag" aria-pressed="true">Bag</button>
+      <button type="button" class="view" data-view="beans" aria-pressed="false">Roasted beans</button>
+    </div>
   </div>
-  <div class="body">
-    <div class="specs"><p>Region: Sul de Minas, Minas Gerais, Brazil</p><p>Varietal: Mundo Novo, Yellow Catuai, Topazio, Acaia</p><p>Altitude: 950–1,120 masl</p><p>Processing: Natural, dried on cherry</p><p>Harvest: Sep 2025</p><p>Acidity: Very mild, citric</p><p>Body: Creamy, Medium</p><p>Roast: Full City</p></div>
-    <p class="more"><a href="/wholesale/minas/">Learn More</a></p>
-    
+  <div class="detail-info">
+    <p class="eyebrow" data-reveal data-decode><span class="macron" aria-hidden="true"></span><span class="decode" data-text="No. 02 / 06 · Lot MIN01N–25">No. 02 / 06 · Lot MIN01N–25</span></p>
+    <h1 class="name" id="name-minas" data-reveal tabindex="-1">Minas</h1>
+    <p class="intro" data-reveal>A creamy natural dried on the cherry, soft and sweet.</p>
+    <p class="origin" data-reveal>Sul de Minas, Minas Gerais, Brazil · Natural, dried on cherry</p>
+    <ul class="tags" aria-label="Character" data-reveal><li class="pill">Natural</li><li class="pill">Single Origin</li></ul>
+    <dl class="specs"><div class="spec" data-reveal><dt>Region</dt><dd>Sul de Minas, Minas Gerais, Brazil</dd></div><div class="spec" data-reveal><dt>Varietal</dt><dd>Mundo Novo, Yellow Catuai, Topazio, Acaia</dd></div><div class="spec" data-reveal><dt>Altitude</dt><dd>950–1,120 masl</dd></div><div class="spec" data-reveal><dt>Processing</dt><dd>Natural, dried on cherry</dd></div><div class="spec" data-reveal><dt>Harvest</dt><dd>Sep 2025</dd></div><div class="spec" data-reveal><dt>Acidity</dt><dd>Very mild, citric</dd></div><div class="spec" data-reveal><dt>Body</dt><dd>Creamy, Medium</dd></div><div class="spec" data-reveal><dt>Roast</dt><dd>Full City</dd></div></dl>
+    <p class="prose" data-reveal>A natural lot from the southern highlands of Minas Gerais, Brazil. Cherries dried whole on patios after harvest at peak ripeness, on the granitic and gneissic soils typical of the region. A tropical semi-humid climate with a long dry season supports slow, even drying. Very mild citric acidity, creamy medium body, soft mouthfeel.</p>
+    <section class="notes" data-reveal aria-labelledby="notes-minas"><h2 id="notes-minas">Tasting notes</h2><ul class="notes-list"><li class="note" data-family="nut"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.3 3.2 5.2 7.2 5.2 11.2a5.2 5.2 0 0 1-10.4 0C6.8 10.2 8.7 6.2 12 3z"/><path d="M12 6.4v9.2"/></svg><span>Hazelnut</span></li><li class="note" data-family="sweet"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.2 12 4.4l7.5 3.8L12 12 4.5 8.2z"/><path d="M4.5 8.2v7.6L12 19.6l7.5-3.8V8.2"/><path d="M12 12v7.6"/></svg><span>Dulce de leche</span></li><li class="note" data-family="cacao"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4.2 2 6.2 6 6.2 9s-2 7-6.2 9c-4.2-2-6.2-6-6.2-9s2-7 6.2-9z"/><path d="M12 3v18M8.6 7.2c-1 3-1 6.6 0 9.6M15.4 7.2c1 3 1 6.6 0 9.6"/></svg><span>Cocoa</span></li><li class="note" data-family="sweet"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.2 12 4.4l7.5 3.8L12 12 4.5 8.2z"/><path d="M4.5 8.2v7.6L12 19.6l7.5-3.8V8.2"/><path d="M12 12v7.6"/></svg><span>Honey</span></li><li class="note" data-family="dried"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="8.2" ry="5" transform="rotate(-24 12 12)"/><path d="M9.4 9.6c.9 1.2.9 3.4 0 4.8M13.6 8.6c1.1 1.8 1.1 5 0 6.8"/></svg><span>Date</span></li></ul></section>
+    <section class="purchase" data-reveal aria-label="Order">
 <form class="preorder" data-slug="minas" data-currency="usd" data-locale="en-US" novalidate>
-  <p class="preorder-title">Pre-order</p>
-  <div class="sizes" role="radiogroup" aria-label="Size"><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-price="$18.00" data-link="" checked><span class="pill pill-button">250g · $18.00</span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-price="$56.00" data-link="" ><span class="pill pill-button">1kg · $56.00</span></label></div>
+  <fieldset class="sizes"><legend class="visually-hidden">Size</legend><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-link="" checked ><span class="pill pill-button">250g <span class="muted">$18.00</span></span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-link=""  ><span class="pill pill-button">1kg <span class="muted">$56.00</span></span></label></fieldset>
   <div class="preorder-row">
-    <div class="qty" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button>
-      <input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button>
-    </div>
-    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="dot">·</span><span class="total">$18.00</span></button>
+    <div class="qty"><button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button><input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity"><button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button></div>
+    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="total">$18.00</span></button>
   </div>
-  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date.</p>
+  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date. <span class="proto">Prototype pricing, not a live offer.</span></p>
   <p class="preorder-error" role="alert" hidden></p>
-</form>
+</form></section>
   </div>
-</section>
+</article>
 
-<section class="coffee slide" id="cauca" data-slug="cauca" data-index="2" aria-roledescription="slide" aria-label="3 of 6: Cauca">
-  <header class="head">
-    <h1 class="title">Cauca</h1>
-    <div class="tags"><span class="pill">Washed</span><span class="pill">Single Origin</span><span class="pill">Organic</span></div>
-  </header>
-  <div class="media" data-bag="cauca">
-    <img class="fallback" src="/images/cauca-bag.png" width="1024" height="1024" alt="Cauca 1kg bag" loading="lazy" decoding="async">
+<article class="detail" data-detail="cauca" id="detail-cauca" hidden aria-labelledby="name-cauca">
+  <div class="detail-media">
+    <figure class="slot" data-slot></figure>
+    <figure class="beans" data-beans><img src="/images/cauca-beans.png" width="1024" height="1024" alt="Cauca roasted beans" loading="lazy" decoding="async"></figure>
+    <div class="views" role="group" aria-label="View">
+      <button type="button" class="view" data-view="bag" aria-pressed="true">Bag</button>
+      <button type="button" class="view" data-view="beans" aria-pressed="false">Roasted beans</button>
+    </div>
   </div>
-  <div class="body">
-    <div class="specs"><p>Region: Cauca, Colombia</p><p>Varietal: Caturra, Bourbon, Castillo</p><p>Altitude: 1,500–2,000 masl</p><p>Processing: Washed</p><p>Harvest: Sep–Nov 2025</p><p>Acidity: Mild</p><p>Body: Medium</p><p>Roast: City+</p></div>
-    <p class="more"><a href="/wholesale/cauca/">Learn More</a></p>
-    
+  <div class="detail-info">
+    <p class="eyebrow" data-reveal data-decode><span class="macron" aria-hidden="true"></span><span class="decode" data-text="No. 03 / 06 · Lot CAU01W–25">No. 03 / 06 · Lot CAU01W–25</span></p>
+    <h1 class="name" id="name-cauca" data-reveal tabindex="-1">Cauca</h1>
+    <p class="intro" data-reveal>A high-altitude washed lot, clean across filter methods.</p>
+    <p class="origin" data-reveal>Cauca, Colombia · Washed</p>
+    <ul class="tags" aria-label="Character" data-reveal><li class="pill">Washed</li><li class="pill">Single Origin</li><li class="pill">Organic</li></ul>
+    <dl class="specs"><div class="spec" data-reveal><dt>Region</dt><dd>Cauca, Colombia</dd></div><div class="spec" data-reveal><dt>Varietal</dt><dd>Caturra, Bourbon, Castillo</dd></div><div class="spec" data-reveal><dt>Altitude</dt><dd>1,500–2,000 masl</dd></div><div class="spec" data-reveal><dt>Processing</dt><dd>Washed</dd></div><div class="spec" data-reveal><dt>Harvest</dt><dd>Sep–Nov 2025</dd></div><div class="spec" data-reveal><dt>Acidity</dt><dd>Mild</dd></div><div class="spec" data-reveal><dt>Body</dt><dd>Medium</dd></div><div class="spec" data-reveal><dt>Roast</dt><dd>City+</dd></div></dl>
+    <p class="prose" data-reveal>A high-altitude washed lot from the Andean highlands of Cauca, Colombia. Grown by indigenous smallholders on volcanic soils between 1,500 and 2,000 meters, shade-grown in traditional polyculture. Bimodal rainfall and cool mountain nights slow cherry maturation. Mild acidity, medium body, a clean washed profile that holds up across filter methods.</p>
+    <section class="notes" data-reveal aria-labelledby="notes-cauca"><h2 id="notes-cauca">Tasting notes</h2><ul class="notes-list"><li class="note" data-family="cacao"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4.2 2 6.2 6 6.2 9s-2 7-6.2 9c-4.2-2-6.2-6-6.2-9s2-7 6.2-9z"/><path d="M12 3v18M8.6 7.2c-1 3-1 6.6 0 9.6M15.4 7.2c1 3 1 6.6 0 9.6"/></svg><span>Cacao nibs</span></li><li class="note" data-family="tropical"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6.5 2.2-10.8 6.5-13.5-1 5.8-3.2 10.3-6.5 13.5z"/><path d="M12 21c0-6.5-2.2-10.8-6.5-13.5 1 5.8 3.2 10.3 6.5 13.5z"/><path d="M12 21V3"/></svg><span>Pineapple</span></li><li class="note" data-family="sweet"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.2 12 4.4l7.5 3.8L12 12 4.5 8.2z"/><path d="M4.5 8.2v7.6L12 19.6l7.5-3.8V8.2"/><path d="M12 12v7.6"/></svg><span>Panela</span></li><li class="note" data-family="floral"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(0 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(72 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(144 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(216 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(288 12 12)"/><circle cx="12" cy="12" r="1.5"/></svg><span>Hibiscus</span></li><li class="note" data-family="citrus"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 12V4M12 12l6.9 4M12 12l-6.9 4"/><circle cx="12" cy="12" r="5.2" stroke-dasharray="1.5 2.4"/></svg><span>Meyer lemon</span></li><li class="note" data-family="citrus"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 12V4M12 12l6.9 4M12 12l-6.9 4"/><circle cx="12" cy="12" r="5.2" stroke-dasharray="1.5 2.4"/></svg><span>Pomelo</span></li></ul></section>
+    <section class="purchase" data-reveal aria-label="Order">
 <form class="preorder" data-slug="cauca" data-currency="usd" data-locale="en-US" novalidate>
-  <p class="preorder-title">Pre-order</p>
-  <div class="sizes" role="radiogroup" aria-label="Size"><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-price="$18.00" data-link="" checked><span class="pill pill-button">250g · $18.00</span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-price="$56.00" data-link="" ><span class="pill pill-button">1kg · $56.00</span></label></div>
+  <fieldset class="sizes"><legend class="visually-hidden">Size</legend><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-link="" checked ><span class="pill pill-button">250g <span class="muted">$18.00</span></span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-link=""  ><span class="pill pill-button">1kg <span class="muted">$56.00</span></span></label></fieldset>
   <div class="preorder-row">
-    <div class="qty" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button>
-      <input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button>
-    </div>
-    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="dot">·</span><span class="total">$18.00</span></button>
+    <div class="qty"><button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button><input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity"><button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button></div>
+    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="total">$18.00</span></button>
   </div>
-  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date.</p>
+  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date. <span class="proto">Prototype pricing, not a live offer.</span></p>
   <p class="preorder-error" role="alert" hidden></p>
-</form>
+</form></section>
   </div>
-</section>
+</article>
 
-<section class="coffee slide" id="antigua" data-slug="antigua" data-index="3" aria-roledescription="slide" aria-label="4 of 6: Antigua">
-  <header class="head">
-    <h1 class="title">Antigua</h1>
-    <div class="tags"><span class="pill">Washed</span><span class="pill">Single Origin</span></div>
-  </header>
-  <div class="media" data-bag="antigua">
-    <img class="fallback" src="/images/antigua-bag.png" width="1024" height="1024" alt="Antigua 1kg bag" loading="lazy" decoding="async">
+<article class="detail" data-detail="antigua" id="detail-antigua" hidden aria-labelledby="name-antigua">
+  <div class="detail-media">
+    <figure class="slot" data-slot></figure>
+    <figure class="beans" data-beans><img src="/images/antigua-beans.png" width="1024" height="1024" alt="Antigua roasted beans" loading="lazy" decoding="async"></figure>
+    <div class="views" role="group" aria-label="View">
+      <button type="button" class="view" data-view="bag" aria-pressed="true">Bag</button>
+      <button type="button" class="view" data-view="beans" aria-pressed="false">Roasted beans</button>
+    </div>
   </div>
-  <div class="body">
-    <div class="specs"><p>Region: San Cristobal el Bajo, Antigua, Guatemala</p><p>Varietal: Bourbon</p><p>Altitude: 1,550–1,580 masl</p><p>Processing: Washed</p><p>Harvest: Mar 2025</p><p>Acidity: Mild, malic, with green apple lift</p><p>Body: Medium</p><p>Roast: City+</p></div>
-    <p class="more"><a href="/wholesale/antigua/">Learn More</a></p>
-    
+  <div class="detail-info">
+    <p class="eyebrow" data-reveal data-decode><span class="macron" aria-hidden="true"></span><span class="decode" data-text="No. 04 / 06 · Lot ANT02W–25">No. 04 / 06 · Lot ANT02W–25</span></p>
+    <h1 class="name" id="name-antigua" data-reveal tabindex="-1">Antigua</h1>
+    <p class="intro" data-reveal>A classic washed Bourbon with a green-apple lift.</p>
+    <p class="origin" data-reveal>San Cristobal el Bajo, Antigua, Guatemala · Washed</p>
+    <ul class="tags" aria-label="Character" data-reveal><li class="pill">Washed</li><li class="pill">Single Origin</li></ul>
+    <dl class="specs"><div class="spec" data-reveal><dt>Region</dt><dd>San Cristobal el Bajo, Antigua, Guatemala</dd></div><div class="spec" data-reveal><dt>Varietal</dt><dd>Bourbon</dd></div><div class="spec" data-reveal><dt>Altitude</dt><dd>1,550–1,580 masl</dd></div><div class="spec" data-reveal><dt>Processing</dt><dd>Washed</dd></div><div class="spec" data-reveal><dt>Harvest</dt><dd>Mar 2025</dd></div><div class="spec" data-reveal><dt>Acidity</dt><dd>Mild, malic, with green apple lift</dd></div><div class="spec" data-reveal><dt>Body</dt><dd>Medium</dd></div><div class="spec" data-reveal><dt>Roast</dt><dd>City+</dd></div></dl>
+    <p class="prose" data-reveal>A washed Bourbon from a single estate in Antigua, Guatemala. Old Bourbon cultivars grown under partial shade from grevillea and avocado, on volcanic soils shaped by Acatenango, Fuego, and Agua. Warm days, cool nights, and seasonal high winds define the microclimate. Cherries fermented in water for 24 to 36 hours, then dried 6 to 9 days on patios, with each day-lot cupped and separated by profile. Mild malic acidity, soft milky mouthfeel, medium body.</p>
+    <section class="notes" data-reveal aria-labelledby="notes-antigua"><h2 id="notes-antigua">Tasting notes</h2><ul class="notes-list"><li class="note" data-family="sweet"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.2 12 4.4l7.5 3.8L12 12 4.5 8.2z"/><path d="M4.5 8.2v7.6L12 19.6l7.5-3.8V8.2"/><path d="M12 12v7.6"/></svg><span>Demerara</span></li><li class="note" data-family="floral"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(0 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(72 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(144 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(216 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(288 12 12)"/><circle cx="12" cy="12" r="1.5"/></svg><span>Lavender</span></li><li class="note" data-family="cacao"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4.2 2 6.2 6 6.2 9s-2 7-6.2 9c-4.2-2-6.2-6-6.2-9s2-7 6.2-9z"/><path d="M12 3v18M8.6 7.2c-1 3-1 6.6 0 9.6M15.4 7.2c1 3 1 6.6 0 9.6"/></svg><span>Cocoa</span></li><li class="note" data-family="orchard"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.6c-3.2-2.2-7.4-.2-7.4 4.4C4.6 16.6 8 21 12 21s7.4-4.4 7.4-9c0-4.6-4.2-6.6-7.4-4.4z"/><path d="M12 7.6c0-2.2 1.1-3.8 3.2-4.6"/></svg><span>Granny Smith</span></li><li class="note" data-family="sweet"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.2 12 4.4l7.5 3.8L12 12 4.5 8.2z"/><path d="M4.5 8.2v7.6L12 19.6l7.5-3.8V8.2"/><path d="M12 12v7.6"/></svg><span>Vanilla bean</span></li><li class="note" data-family="sweet"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8.2 12 4.4l7.5 3.8L12 12 4.5 8.2z"/><path d="M4.5 8.2v7.6L12 19.6l7.5-3.8V8.2"/><path d="M12 12v7.6"/></svg><span>Shortbread</span></li></ul></section>
+    <section class="purchase" data-reveal aria-label="Order">
 <form class="preorder" data-slug="antigua" data-currency="usd" data-locale="en-US" novalidate>
-  <p class="preorder-title">Pre-order</p>
-  <div class="sizes" role="radiogroup" aria-label="Size"><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-price="$18.00" data-link="" checked><span class="pill pill-button">250g · $18.00</span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-price="$56.00" data-link="" ><span class="pill pill-button">1kg · $56.00</span></label></div>
+  <fieldset class="sizes"><legend class="visually-hidden">Size</legend><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-link="" checked ><span class="pill pill-button">250g <span class="muted">$18.00</span></span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-link=""  ><span class="pill pill-button">1kg <span class="muted">$56.00</span></span></label></fieldset>
   <div class="preorder-row">
-    <div class="qty" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button>
-      <input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button>
-    </div>
-    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="dot">·</span><span class="total">$18.00</span></button>
+    <div class="qty"><button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button><input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity"><button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button></div>
+    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="total">$18.00</span></button>
   </div>
-  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date.</p>
+  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date. <span class="proto">Prototype pricing, not a live offer.</span></p>
   <p class="preorder-error" role="alert" hidden></p>
-</form>
+</form></section>
   </div>
-</section>
+</article>
 
-<section class="coffee slide" id="guji" data-slug="guji" data-index="4" aria-roledescription="slide" aria-label="5 of 6: Guji">
-  <header class="head">
-    <h1 class="title">Guji</h1>
-    <div class="tags"><span class="pill">Organic</span><span class="pill">Washed</span><span class="pill">Single Origin</span></div>
-  </header>
-  <div class="media" data-bag="guji">
-    <img class="fallback" src="/images/guji-bag.png" width="1024" height="1024" alt="Guji 1kg bag" loading="lazy" decoding="async">
+<article class="detail" data-detail="guji" id="detail-guji" hidden aria-labelledby="name-guji">
+  <div class="detail-media">
+    <figure class="slot" data-slot></figure>
+    <figure class="beans" data-beans><img src="/images/guji-beans.png" width="1024" height="1024" alt="Guji roasted beans" loading="lazy" decoding="async"></figure>
+    <div class="views" role="group" aria-label="View">
+      <button type="button" class="view" data-view="bag" aria-pressed="true">Bag</button>
+      <button type="button" class="view" data-view="beans" aria-pressed="false">Roasted beans</button>
+    </div>
   </div>
-  <div class="body">
-    <div class="specs"><p>Region: Uraga, Guji Zone, Oromia, Ethiopia</p><p>Varietal: JARC selections 74110, 74112</p><p>Altitude: 2,000–2,150 masl</p><p>Processing: Washed, raised African-bed dried</p><p>Harvest: Dec 2025–Jan 2026</p><p>Acidity: Bright</p><p>Body: Light</p><p>Roast: City</p></div>
-    <p class="more"><a href="/wholesale/guji/">Learn More</a></p>
-    
+  <div class="detail-info">
+    <p class="eyebrow" data-reveal data-decode><span class="macron" aria-hidden="true"></span><span class="decode" data-text="No. 05 / 06 · Lot GUJ01W-25">No. 05 / 06 · Lot GUJ01W-25</span></p>
+    <h1 class="name" id="name-guji" data-reveal tabindex="-1">Guji</h1>
+    <p class="intro" data-reveal>A bright washed Ethiopian built for filter brewing.</p>
+    <p class="origin" data-reveal>Uraga, Guji Zone, Oromia, Ethiopia · Washed, raised African-bed dried</p>
+    <ul class="tags" aria-label="Character" data-reveal><li class="pill">Organic</li><li class="pill">Washed</li><li class="pill">Single Origin</li></ul>
+    <dl class="specs"><div class="spec" data-reveal><dt>Region</dt><dd>Uraga, Guji Zone, Oromia, Ethiopia</dd></div><div class="spec" data-reveal><dt>Varietal</dt><dd>JARC selections 74110, 74112</dd></div><div class="spec" data-reveal><dt>Altitude</dt><dd>2,000–2,150 masl</dd></div><div class="spec" data-reveal><dt>Processing</dt><dd>Washed, raised African-bed dried</dd></div><div class="spec" data-reveal><dt>Harvest</dt><dd>Dec 2025–Jan 2026</dd></div><div class="spec" data-reveal><dt>Acidity</dt><dd>Bright</dd></div><div class="spec" data-reveal><dt>Body</dt><dd>Light</dd></div><div class="spec" data-reveal><dt>Roast</dt><dd>City</dd></div></dl>
+    <p class="prose" data-reveal>A washed Grade 2 from the Guji highlands of southern Ethiopia. JARC selections grown as garden coffee on rich loamy soil in the hills of Uraga, at 2,000 to 2,150 meters where cool highland temperatures slow cherry development and concentrate sugars. Cherries hand-sorted at intake, traditional washed processing, sun-dried on raised beds under shade. The 74110 and 74112 selections are bred for coffee berry disease resistance and express best through filter brewing. USDA Organic certified.</p>
+    <section class="notes" data-reveal aria-labelledby="notes-guji"><h2 id="notes-guji">Tasting notes</h2><ul class="notes-list"><li class="note" data-family="orchard"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.6c-3.2-2.2-7.4-.2-7.4 4.4C4.6 16.6 8 21 12 21s7.4-4.4 7.4-9c0-4.6-4.2-6.6-7.4-4.4z"/><path d="M12 7.6c0-2.2 1.1-3.8 3.2-4.6"/></svg><span>Yellow apricot</span></li><li class="note" data-family="tropical"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6.5 2.2-10.8 6.5-13.5-1 5.8-3.2 10.3-6.5 13.5z"/><path d="M12 21c0-6.5-2.2-10.8-6.5-13.5 1 5.8 3.2 10.3 6.5 13.5z"/><path d="M12 21V3"/></svg><span>Passion fruit</span></li><li class="note" data-family="citrus"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 12V4M12 12l6.9 4M12 12l-6.9 4"/><circle cx="12" cy="12" r="5.2" stroke-dasharray="1.5 2.4"/></svg><span>Persian lime</span></li><li class="note" data-family="floral"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(0 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(72 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(144 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(216 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(288 12 12)"/><circle cx="12" cy="12" r="1.5"/></svg><span>Hibiscus</span></li><li class="note" data-family="tea"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.4 4.6c-8.4 0-13.6 4.2-14.8 12.8 8.4 0 13.6-4.2 14.8-12.8z"/><path d="M4.6 17.4c3-5.2 7-8.6 11.6-10.6"/></svg><span>Earl Grey</span></li></ul></section>
+    <section class="purchase" data-reveal aria-label="Order">
 <form class="preorder" data-slug="guji" data-currency="usd" data-locale="en-US" novalidate>
-  <p class="preorder-title">Pre-order</p>
-  <div class="sizes" role="radiogroup" aria-label="Size"><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-price="$18.00" data-link="" checked><span class="pill pill-button">250g · $18.00</span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-price="$56.00" data-link="" ><span class="pill pill-button">1kg · $56.00</span></label></div>
+  <fieldset class="sizes"><legend class="visually-hidden">Size</legend><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-link="" checked ><span class="pill pill-button">250g <span class="muted">$18.00</span></span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-link=""  ><span class="pill pill-button">1kg <span class="muted">$56.00</span></span></label></fieldset>
   <div class="preorder-row">
-    <div class="qty" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button>
-      <input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button>
-    </div>
-    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="dot">·</span><span class="total">$18.00</span></button>
+    <div class="qty"><button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button><input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity"><button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button></div>
+    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="total">$18.00</span></button>
   </div>
-  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date.</p>
+  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date. <span class="proto">Prototype pricing, not a live offer.</span></p>
   <p class="preorder-error" role="alert" hidden></p>
-</form>
+</form></section>
+  </div>
+</article>
+
+<article class="detail" data-detail="yirgacheffe" id="detail-yirgacheffe" hidden aria-labelledby="name-yirgacheffe">
+  <div class="detail-media">
+    <figure class="slot" data-slot></figure>
+    <figure class="beans" data-beans><img src="/images/yirgacheffe-beans.png" width="1024" height="1024" alt="Yirgacheffe roasted beans" loading="lazy" decoding="async"></figure>
+    <div class="views" role="group" aria-label="View">
+      <button type="button" class="view" data-view="bag" aria-pressed="true">Bag</button>
+      <button type="button" class="view" data-view="beans" aria-pressed="false">Roasted beans</button>
+    </div>
+  </div>
+  <div class="detail-info">
+    <p class="eyebrow" data-reveal data-decode><span class="macron" aria-hidden="true"></span><span class="decode" data-text="No. 06 / 06 · Lot YRG01W–25">No. 06 / 06 · Lot YRG01W–25</span></p>
+    <h1 class="name" id="name-yirgacheffe" data-reveal tabindex="-1">Yirgacheffe</h1>
+    <p class="intro" data-reveal>A floral washed heirloom from Gedeo.</p>
+    <p class="origin" data-reveal>Yirgacheffe, Gedeo Zone, Ethiopia · Washed, raised African-bed dried</p>
+    <ul class="tags" aria-label="Character" data-reveal><li class="pill">Organic</li><li class="pill">Washed</li><li class="pill">Single Origin</li></ul>
+    <dl class="specs"><div class="spec" data-reveal><dt>Region</dt><dd>Yirgacheffe, Gedeo Zone, Ethiopia</dd></div><div class="spec" data-reveal><dt>Varietal</dt><dd>Ethiopian heirloom (Kurmue, Dago, Wolisho)</dd></div><div class="spec" data-reveal><dt>Altitude</dt><dd>1,800–2,200 masl</dd></div><div class="spec" data-reveal><dt>Processing</dt><dd>Washed, raised African-bed dried</dd></div><div class="spec" data-reveal><dt>Harvest</dt><dd>Nov 2025–Jan 2026</dd></div><div class="spec" data-reveal><dt>Acidity</dt><dd>Bright</dd></div><div class="spec" data-reveal><dt>Body</dt><dd>Light</dd></div><div class="spec" data-reveal><dt>Roast</dt><dd>City</dd></div></dl>
+    <p class="prose" data-reveal>A washed Grade 1 from the Gedeo highlands of southern Ethiopia. Heirloom selections grown on fertile red-brown clay under native enset, albizia, acacia, and millettia shade. Cherries hand-sorted at intake, disc-pulped, fermented under water for 36 to 48 hours, soaked a further 6 to 8 hours, then dried on raised beds for 6 to 7 days. USDA Organic certified.</p>
+    <section class="notes" data-reveal aria-labelledby="notes-yirgacheffe"><h2 id="notes-yirgacheffe">Tasting notes</h2><ul class="notes-list"><li class="note" data-family="floral"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(0 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(72 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(144 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(216 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(288 12 12)"/><circle cx="12" cy="12" r="1.5"/></svg><span>Jasmine</span></li><li class="note" data-family="citrus"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 12V4M12 12l6.9 4M12 12l-6.9 4"/><circle cx="12" cy="12" r="5.2" stroke-dasharray="1.5 2.4"/></svg><span>Bergamot</span></li><li class="note" data-family="orchard"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7.6c-3.2-2.2-7.4-.2-7.4 4.4C4.6 16.6 8 21 12 21s7.4-4.4 7.4-9c0-4.6-4.2-6.6-7.4-4.4z"/><path d="M12 7.6c0-2.2 1.1-3.8 3.2-4.6"/></svg><span>Honeydew</span></li><li class="note" data-family="tropical"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6.5 2.2-10.8 6.5-13.5-1 5.8-3.2 10.3-6.5 13.5z"/><path d="M12 21c0-6.5-2.2-10.8-6.5-13.5 1 5.8 3.2 10.3 6.5 13.5z"/><path d="M12 21V3"/></svg><span>Lychee</span></li><li class="note" data-family="floral"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(0 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(72 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(144 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(216 12 12)"/><path d="M12 3.6c1.7 2.2 1.7 4.6 0 6.8-1.7-2.2-1.7-4.6 0-6.8z" transform="rotate(288 12 12)"/><circle cx="12" cy="12" r="1.5"/></svg><span>Hibiscus</span></li><li class="note" data-family="tea"><svg class="sicon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.4 4.6c-8.4 0-13.6 4.2-14.8 12.8 8.4 0 13.6-4.2 14.8-12.8z"/><path d="M4.6 17.4c3-5.2 7-8.6 11.6-10.6"/></svg><span>Earl Grey</span></li></ul></section>
+    <section class="purchase" data-reveal aria-label="Order">
+<form class="preorder" data-slug="yirgacheffe" data-currency="usd" data-locale="en-US" novalidate>
+  <fieldset class="sizes"><legend class="visually-hidden">Size</legend><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-link="" checked ><span class="pill pill-button">250g <span class="muted">$18.00</span></span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-link=""  ><span class="pill pill-button">1kg <span class="muted">$56.00</span></span></label></fieldset>
+  <div class="preorder-row">
+    <div class="qty"><button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button><input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity"><button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button></div>
+    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="total">$18.00</span></button>
+  </div>
+  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date. <span class="proto">Prototype pricing, not a live offer.</span></p>
+  <p class="preorder-error" role="alert" hidden></p>
+</form></section>
+  </div>
+</article>
   </div>
 </section>
-
-<section class="coffee slide" id="yirgacheffe" data-slug="yirgacheffe" data-index="5" aria-roledescription="slide" aria-label="6 of 6: Yirgacheffe">
-  <header class="head">
-    <h1 class="title">Yirgacheffe</h1>
-    <div class="tags"><span class="pill">Organic</span><span class="pill">Washed</span><span class="pill">Single Origin</span></div>
-  </header>
-  <div class="media" data-bag="yirgacheffe">
-    <img class="fallback" src="/images/yirgacheffe-bag.png" width="1024" height="1024" alt="Yirgacheffe 1kg bag" loading="lazy" decoding="async">
-  </div>
-  <div class="body">
-    <div class="specs"><p>Region: Yirgacheffe, Gedeo Zone, Ethiopia</p><p>Varietal: Ethiopian heirloom (Kurmue, Dago, Wolisho)</p><p>Altitude: 1,800–2,200 masl</p><p>Processing: Washed, raised African-bed dried</p><p>Harvest: Nov 2025–Jan 2026</p><p>Acidity: Bright</p><p>Body: Light</p><p>Roast: City</p></div>
-    <p class="more"><a href="/wholesale/yirgacheffe/">Learn More</a></p>
-    
-<form class="preorder" data-slug="yirgacheffe" data-currency="usd" data-locale="en-US" novalidate>
-  <p class="preorder-title">Pre-order</p>
-  <div class="sizes" role="radiogroup" aria-label="Size"><label class="size"><input type="radio" name="size" value="250g" data-amount="1800" data-price="$18.00" data-link="" checked><span class="pill pill-button">250g · $18.00</span></label><label class="size"><input type="radio" name="size" value="1kg" data-amount="5600" data-price="$56.00" data-link="" ><span class="pill pill-button">1kg · $56.00</span></label></div>
-  <div class="preorder-row">
-    <div class="qty" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="-1" aria-label="Decrease quantity">−</button>
-      <input class="qty-input" type="number" name="quantity" inputmode="numeric" min="1" max="20" value="1" aria-label="Quantity">
-      <button type="button" class="qty-btn" data-step="1" aria-label="Increase quantity">+</button>
-    </div>
-    <button type="submit" class="button preorder-button"><span class="label">Pre-order</span><span class="dot">·</span><span class="total">$18.00</span></button>
-  </div>
-  <p class="preorder-note">Pre-orders roast to order and ship within 10 days of the order date.</p>
-  <p class="preorder-error" role="alert" hidden></p>
-</form>
-  </div>
-</section></div>
-</div>
+<section class="register" id="register" aria-labelledby="register-title">
+  <h2 id="register-title" class="eyebrow"><span class="macron" aria-hidden="true"></span>The collection, as a list</h2>
+  <ol class="register-list"><li><a href="/coffee/cerrado/" data-inspect="cerrado"><span class="no">01</span><span class="rn">Cerrado</span><span class="muted">Cerrado, Minas Gerais, Brazil</span><span class="muted">Natural</span><span class="muted rnotes">Cocoa, Sultana, Almond</span></a></li><li><a href="/coffee/minas/" data-inspect="minas"><span class="no">02</span><span class="rn">Minas</span><span class="muted">Sul de Minas, Minas Gerais, Brazil</span><span class="muted">Natural, dried on cherry</span><span class="muted rnotes">Hazelnut, Dulce de leche, Cocoa</span></a></li><li><a href="/coffee/cauca/" data-inspect="cauca"><span class="no">03</span><span class="rn">Cauca</span><span class="muted">Cauca, Colombia</span><span class="muted">Washed</span><span class="muted rnotes">Cacao nibs, Pineapple, Panela</span></a></li><li><a href="/coffee/antigua/" data-inspect="antigua"><span class="no">04</span><span class="rn">Antigua</span><span class="muted">San Cristobal el Bajo, Antigua, Guatemala</span><span class="muted">Washed</span><span class="muted rnotes">Demerara, Lavender, Cocoa</span></a></li><li><a href="/coffee/guji/" data-inspect="guji"><span class="no">05</span><span class="rn">Guji</span><span class="muted">Uraga, Guji Zone, Oromia, Ethiopia</span><span class="muted">Washed, raised African-bed dried</span><span class="muted rnotes">Yellow apricot, Passion fruit, Persian lime</span></a></li><li><a href="/coffee/yirgacheffe/" data-inspect="yirgacheffe"><span class="no">06</span><span class="rn">Yirgacheffe</span><span class="muted">Yirgacheffe, Gedeo Zone, Ethiopia</span><span class="muted">Washed, raised African-bed dried</span><span class="muted rnotes">Jasmine, Bergamot, Honeydew</span></a></li></ol>
+</section>
 </main>
-
-<div class="bar" data-bar>
-  <button type="button" class="arrow" data-prev aria-label="Previous coffee">←</button>
-  <div class="tabs" role="tablist" aria-label="Coffees"><button type="button" class="tab" data-goto="0" aria-current="true">Cerrado</button><button type="button" class="tab" data-goto="1" >Minas</button><button type="button" class="tab" data-goto="2" >Cauca</button><button type="button" class="tab" data-goto="3" >Antigua</button><button type="button" class="tab" data-goto="4" >Guji</button><button type="button" class="tab" data-goto="5" >Yirgacheffe</button></div>
-  <p class="counter" data-counter aria-live="polite"><span data-current-name>Cerrado</span> <span class="muted" data-count>1 / 6</span></p>
-  <button type="button" class="arrow" data-next aria-label="Next coffee">→</button>
-</div>
-<script type="application/json" id="bag-data">{"paperColor":"#ebe7df","labelColor":"#f7f5f3","brand":"Sahkō","coffees":{"cerrado":{"name":"Cerrado","specs":[["Region","Cerrado, Minas Gerais, Brazil"],["Varietal","Mundo Novo, Catuai Red & Yellow, Topazio, Catucai, Acaia"],["Altitude","1,200 masl"],["Processing","Natural"],["Harvest","Jul–Sep 2025"],["Acidity","Medium"],["Body","Light"],["Roast","Full City"]],"lot":"CER01N–25","model":"","image":"/images/cerrado-bag.png"},"minas":{"name":"Minas","specs":[["Region","Sul de Minas, Minas Gerais, Brazil"],["Varietal","Mundo Novo, Yellow Catuai, Topazio, Acaia"],["Altitude","950–1,120 masl"],["Processing","Natural, dried on cherry"],["Harvest","Sep 2025"],["Acidity","Very mild, citric"],["Body","Creamy, Medium"],["Roast","Full City"]],"lot":"MIN01N–25","model":"","image":"/images/minas-bag.png"},"cauca":{"name":"Cauca","specs":[["Region","Cauca, Colombia"],["Varietal","Caturra, Bourbon, Castillo"],["Altitude","1,500–2,000 masl"],["Processing","Washed"],["Harvest","Sep–Nov 2025"],["Acidity","Mild"],["Body","Medium"],["Roast","City+"]],"lot":"CAU01W–25","model":"","image":"/images/cauca-bag.png"},"antigua":{"name":"Antigua","specs":[["Region","San Cristobal el Bajo, Antigua, Guatemala"],["Varietal","Bourbon"],["Altitude","1,550–1,580 masl"],["Processing","Washed"],["Harvest","Mar 2025"],["Acidity","Mild, malic, with green apple lift"],["Body","Medium"],["Roast","City+"]],"lot":"ANT02W–25","model":"","image":"/images/antigua-bag.png"},"guji":{"name":"Guji","specs":[["Region","Uraga, Guji Zone, Oromia, Ethiopia"],["Varietal","JARC selections 74110, 74112"],["Altitude","2,000–2,150 masl"],["Processing","Washed, raised African-bed dried"],["Harvest","Dec 2025–Jan 2026"],["Acidity","Bright"],["Body","Light"],["Roast","City"]],"lot":"GUJ01W-25","model":"","image":"/images/guji-bag.png"},"yirgacheffe":{"name":"Yirgacheffe","specs":[["Region","Yirgacheffe, Gedeo Zone, Ethiopia"],["Varietal","Ethiopian heirloom (Kurmue, Dago, Wolisho)"],["Altitude","1,800–2,200 masl"],["Processing","Washed, raised African-bed dried"],["Harvest","Nov 2025–Jan 2026"],["Acidity","Bright"],["Body","Light"],["Roast","City"]],"lot":"YRG01W–25","model":"","image":"/images/yirgacheffe-bag.png"}}}</script>
+<script type="application/json" id="catalogue">{"brand":"Sahkō","coffees":[{"slug":"cerrado","name":"Cerrado","index":0,"country":"Brazil","region":"Cerrado, Minas Gerais","process":"Natural","notes":["Cocoa","Sultana","Almond","Demerara"],"families":["cacao","dried","nut","sweet"],"tags":["Natural","Single Origin"]},{"slug":"minas","name":"Minas","index":1,"country":"Brazil","region":"Sul de Minas, Minas Gerais","process":"Natural, dried on cherry","notes":["Hazelnut","Dulce de leche","Cocoa","Honey","Date"],"families":["nut","sweet","cacao","dried"],"tags":["Natural","Single Origin"]},{"slug":"cauca","name":"Cauca","index":2,"country":"Colombia","region":"Cauca","process":"Washed","notes":["Cacao nibs","Pineapple","Panela","Hibiscus","Meyer lemon","Pomelo"],"families":["cacao","tropical","sweet","floral","citrus"],"tags":["Washed","Single Origin","Organic"]},{"slug":"antigua","name":"Antigua","index":3,"country":"Guatemala","region":"San Cristobal el Bajo, Antigua","process":"Washed","notes":["Demerara","Lavender","Cocoa","Granny Smith","Vanilla bean","Shortbread"],"families":["sweet","floral","cacao","orchard"],"tags":["Washed","Single Origin"]},{"slug":"guji","name":"Guji","index":4,"country":"Ethiopia","region":"Uraga, Guji Zone, Oromia","process":"Washed, raised African-bed dried","notes":["Yellow apricot","Passion fruit","Persian lime","Hibiscus","Earl Grey"],"families":["orchard","tropical","citrus","floral","tea"],"tags":["Organic","Washed","Single Origin"]},{"slug":"yirgacheffe","name":"Yirgacheffe","index":5,"country":"Ethiopia","region":"Yirgacheffe, Gedeo Zone","process":"Washed, raised African-bed dried","notes":["Jasmine","Bergamot","Honeydew","Lychee","Hibiscus","Earl Grey"],"families":["floral","citrus","orchard","tropical","tea"],"tags":["Organic","Washed","Single Origin"]}],"families":[{"id":"floral","label":"Floral"},{"id":"citrus","label":"Citrus"},{"id":"tropical","label":"Tropical"},{"id":"orchard","label":"Orchard fruit"},{"id":"dried","label":"Dried fruit"},{"id":"cacao","label":"Cacao"},{"id":"nut","label":"Nut"},{"id":"sweet","label":"Caramel & sweet"},{"id":"tea","label":"Tea"}],"combine":"any"}</script>
 <script src="/assets/site.js" defer></script>
-<script src="/assets/carousel.js" defer></script>
-<script type="importmap">{"imports":{"three":"/assets/vendor/three.module.js"}}</script>
-
 </body>
 </html>
