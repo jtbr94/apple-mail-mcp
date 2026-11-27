@@ -9,8 +9,18 @@ const require = createRequire(import.meta.url);
 const { loadSite, loadCoffees } = require('../lib/catalog.js');
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const out = path.join(root, 'public');
+const args = process.argv.slice(2);
+const relative = args.includes('--relative');
+const outName = args.includes('--out') ? args[args.indexOf('--out') + 1] : 'public';
+const out = path.join(root, outName);
 const site = loadSite();
+if (relative) site.__relative = true;
+if (outName !== 'public') {
+  // a sandbox build carries its own copy of the static assets
+  fs.mkdirSync(out, { recursive: true });
+  fs.cpSync(path.join(root, 'public', 'assets'), path.join(out, 'assets'), { recursive: true });
+  fs.cpSync(path.join(root, 'public', 'images'), path.join(out, 'images'), { recursive: true });
+}
 const coffees = loadCoffees();
 
 function write(rel, html) {
@@ -20,7 +30,18 @@ function write(rel, html) {
   console.log('wrote', path.relative(root, file));
 }
 
-write('index.html', homePage(site, coffees));
+// In a relative/sandbox build the entry page is published as a fragment (the host wraps it in its own document).
+const home = homePage(site, coffees);
+write(
+  'index.html',
+  relative
+    ? home
+        .replace(/^<!doctype html>\s*<html[^>]*>\s*<head>\s*/i, '')
+        .replace(/<meta charset="utf-8">\s*<meta name="viewport"[^>]*>\s*/i, '')
+        .replace(/<\/head>\s*<body class="([^"]*)">/i, '<div class="$1">')
+        .replace(/<\/body>\s*<\/html>\s*$/i, '</div>')
+    : home
+);
 for (const c of coffees) write(path.join('wholesale', c.slug, 'index.html'), coffeePage(site, c));
 write(path.join('information', 'index.html'), informationPage(site));
 write(path.join('success', 'index.html'), successPage(site));

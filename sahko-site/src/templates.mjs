@@ -1,6 +1,7 @@
 // HTML templates. Everything is plain template strings so there is no framework to install.
 import { formatMoney } from '../lib/catalog.js';
 
+// When BASE is set to a relative prefix (e.g. './' or '../../'), every root-absolute URL is rewritten relative to the page.
 export const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
@@ -36,10 +37,13 @@ export function preorderForm(site, coffee) {
 }
 
 export function layout(site, { title, description, path, body, bodyClass = '', extra = '' }) {
+  const relative = !!site.__relative;
+  const depth = relative ? Math.max(0, path.split('/').filter(Boolean).length - (path.endsWith('/') ? 0 : 1)) : 0;
+  const base = relative ? (depth ? '../'.repeat(depth) : './') : '/';
   const fullTitle = title ? `${title} – ${site.brand}` : site.brand;
   const url = `${site.url.replace(/\/+$/, '')}${path}`;
   const current = (href) => (href === '/' ? path === '/' || path.startsWith('/wholesale') : path.startsWith(href));
-  return `<!doctype html>
+  const html = `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -77,6 +81,16 @@ ${extra || ''}
 ${site.bags?.enabled ? '<script type="module" src="/assets/bags.js"></script>' : ''}
 </body>
 </html>`;
+  if (!relative) return html;
+  // href="/x", src="/x", url in importmap and data paths → relative to this page; directory links keep their trailing slash
+  return html
+    .replace(/(href|src|content)="\/(?!\/)([^"]*)"/g, (m, attr, rest) => (attr === 'content' && /^https?:/.test(m) ? m : `${attr}="${base}${rest}"`))
+    .replace(/"\/assets\/vendor\/three\.module\.js"/g, `"${base}assets/vendor/three.module.js"`)
+    .replace(/"\/images\//g, `"${base}images/`)
+    .replace(/'\/images\//g, `'${base}images/`)
+    .replace(/\\"image\\":\\"\//g, `\\"image\\":\\"${base}`)
+    .replace(/href="(\.\/|(?:\.\.\/)+)"/g, (m, b) => `href="${b}index.html"`)
+    .replace(/href="((?:\.\.\/)*(?:\.\/)?[a-z0-9/-]+\/)"/g, (m, b) => `href="${b}index.html"`);
 }
 
 export function bagData(site, coffees) {

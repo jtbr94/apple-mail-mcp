@@ -36,7 +36,7 @@
     "wheelGlide": true
   },
   "bags": {
-    "enabled": true,
+    "enabled": false,
     "paperColor": "#ebe7df",
     "labelColor": "#f7f5f3"
   }
