@@ -43,10 +43,12 @@ function boot(scene) {
   function measure() {
     const r = stage.getBoundingClientRect();
     const phone = r.width < 810;
-    const bagW = phone ? Math.min(r.width * 0.68, 300) : Math.min(Math.max(r.height * 0.46, 220), 440, r.width * 0.36);
+    const bagW0 = phone ? Math.min(r.width * 0.68, 300) : Math.min(Math.max(r.height * 0.46, 220), 440, r.width * 0.36);
     const rx = phone ? Math.max(r.width * 0.62, 160) : Math.min(Math.max(r.width * 0.4, 180), 600);
     geo = { rx, rz: rx * 0.9, ry: phone ? 34 : Math.round(r.height * 0.11), focal: 2.2 };
-    const cy = phone ? 0.4 : 0.51;
+    const originMode = scene.classList.contains('mode-origin');
+    const cy = phone ? (originMode ? 0.5 : 0.4) : originMode ? 0.63 : 0.51;
+    const bagW = originMode ? bagW0 * 0.78 : bagW0;
     stage.style.setProperty('--bag-w', `${Math.round(bagW)}px`);
     stage.style.setProperty('--cy', `${cy * 100}%`);
     // the plinth line sits under the front bag: the image is centred 6% above cy and the bag graphic ends at 90% of the image height
@@ -70,22 +72,30 @@ function boot(scene) {
     });
   }
 
+  // the plate follows the *target* at once, so a click on the plate always inspects the bag that is arriving
+  function syncPlate() {
+    const idx = frontIdx();
+    if (idx < 0) return;
+    const c = coffees[idx];
+    plate.name.textContent = c.name;
+    plate.origin.textContent = `${c.region}, ${c.country}${c.process ? ' · ' + c.process : ''}`;
+    plate.notes.textContent = c.notes.slice(0, 3).join(', ');
+    plate.link.href = inspectUrl(c.slug);
+    plate.link.dataset.inspect = c.slug;
+    indicator.forEach((d, i) => d.classList.toggle('on', i === idx));
+  }
+
   function settle() {
     const idx = frontIdx();
     if (idx < 0) return;
     const c = coffees[idx];
+    syncPlate();
     items.forEach((li, i) => {
       const a = li.querySelector('a');
       const front = i === idx;
       a.tabIndex = front ? 0 : -1;
       if (front) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
     });
-    indicator.forEach((d, i) => d.classList.toggle('on', i === idx));
-    plate.name.textContent = c.name;
-    plate.origin.textContent = `${c.region}, ${c.country}${c.process ? ' · ' + c.process : ''}`;
-    plate.notes.textContent = c.notes.slice(0, 3).join(', ');
-    plate.link.href = inspectUrl(c.slug);
-    plate.link.dataset.inspect = c.slug;
     backLink.href = browseUrl(c.slug);
     live.textContent = `${c.name}, ${c.country}. ${posOf(idx) + 1} of ${order.length}.`;
     if (st.state === BROWSING && atHome()) history.replaceState(history.state, '', `${location.search}#${c.slug}`);
@@ -95,13 +105,14 @@ function boot(scene) {
     const dt = Math.min((now - (last || now)) / 1000, 0.05);
     last = now;
     phase = O.approach(phase, target, dt);
-    if (Math.abs(target - phase) < 0.0006) { phase = target; render(); raf = 0; last = 0; settle(); return; }
+    if (Math.abs(target - phase) < 0.001) { phase = target; render(); raf = 0; last = 0; settle(); return; }
     render();
     raf = requestAnimationFrame(loop);
   }
 
   function animateTo(t) {
     target = t;
+    syncPlate();
     if (!ms()) { phase = t; render(); settle(); return; }
     if (!raf) raf = requestAnimationFrame(loop);
   }
@@ -361,8 +372,46 @@ function boot(scene) {
     const q = params.toString();
     if (st.state === BROWSING) history.replaceState(history.state, '', `${location.pathname}${q ? '?' + q : ''}${location.hash}`);
   }
+  // Origin Atlas: fetched the first time Origin is chosen; markers are server-rendered buttons
+  const atlas = scene.querySelector('[data-atlas]');
+  let atlasLoaded = false;
+  async function loadAtlas() {
+    if (atlasLoaded || !atlas) return;
+    atlasLoaded = true;
+    try {
+      const res = await fetch(atlas.dataset.src);
+      if (!res.ok) throw new Error(res.status);
+      const map = atlas.querySelector('[data-atlas-map]');
+      map.innerHTML = await res.text();
+      map.querySelectorAll('.atlas-origin').forEach((p) => p.addEventListener('click', () => toggleOrigin(p.dataset.country)));
+      syncAtlas();
+    } catch (err) { console.warn('atlas unavailable', err); atlas.hidden = true; }
+  }
+  function syncAtlas() {
+    if (!atlas) return;
+    const sel = selected.origin;
+    atlas.querySelectorAll('[data-marker]').forEach((b) => b.setAttribute('aria-pressed', String(sel.has(b.dataset.marker))));
+    atlas.querySelectorAll('.atlas-origin').forEach((p) => p.classList.toggle('is-on', sel.has(p.dataset.country)));
+    // glide the map a little toward the chosen country
+    const pan = atlas.querySelector('[data-atlas-pan]');
+    const one = sel.size === 1 ? atlas.querySelector(`[data-marker="${CSS.escape([...sel][0])}"]`) : null;
+    if (one) { const dx = 50 - parseFloat(one.style.left), dy = 50 - parseFloat(one.style.top); pan.style.transform = `translate(${(dx * 0.4).toFixed(1)}%, ${(dy * 0.4).toFixed(1)}%) scale(1.3)`; }
+    else pan.style.transform = '';
+    atlas.classList.toggle('is-zoomed', !!one);
+  }
+  function toggleOrigin(country) {
+    const set = selected.origin; const was = set.has(country); set.clear(); if (!was) set.add(country);
+    rows.origin.querySelectorAll('[data-filter]').forEach((x) => x.setAttribute('aria-pressed', String(set.has(x.dataset.value))));
+    applyFilter(); syncAtlas();
+  }
+  atlas?.querySelectorAll('[data-marker]').forEach((b) => b.addEventListener('click', () => toggleOrigin(b.dataset.marker)));
+
   function setMode(m) {
     mode = m;
+    scene.classList.toggle('mode-origin', m === 'origin');
+    scene.classList.toggle('mode-profile', m === 'profile');
+    if (atlas) { atlas.hidden = m !== 'origin'; if (m === 'origin') loadAtlas(); }
+    measure();
     modes.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mode === m)));
     filtersBox.hidden = m === 'collection';
     Object.entries(rows).forEach(([k, el]) => { el.hidden = k !== m; });
@@ -373,8 +422,8 @@ function boot(scene) {
     b.addEventListener('click', () => {
       const set = selected[b.dataset.filter];
       const v = b.dataset.value;
-      if (b.dataset.filter === 'origin') { const was = set.has(v); set.clear(); if (!was) set.add(v); }
-      else { set.has(v) ? set.delete(v) : set.add(v); }
+      if (b.dataset.filter === 'origin') { toggleOrigin(v); return; }
+      set.has(v) ? set.delete(v) : set.add(v);
       rows[b.dataset.filter].querySelectorAll('[data-filter]').forEach((x) => x.setAttribute('aria-pressed', String(set.has(x.dataset.value))));
       applyFilter();
     });
@@ -401,6 +450,7 @@ function boot(scene) {
     (params.get('f') || '').split(',').filter(Boolean).forEach((v) => selected[m].add(v));
     rows[m].querySelectorAll('[data-filter]').forEach((x) => x.setAttribute('aria-pressed', String(selected[m].has(x.dataset.value))));
     setMode(m);
+    syncAtlas();
   }
   const startSlug = startHash.replace(/^inspect-/, '');
   if (startSlug && bySlug(startSlug) >= 0) { const pos = posOf(bySlug(startSlug)); if (pos >= 0) { target = phase = O.phaseForIndex(pos, order.length, 0); render(); settle(); } }

@@ -22,7 +22,7 @@ Without Stripe keys everything works except payment: the button explains that pr
 - `src/templates.mjs` – every page as a template; `src/icons.mjs` – the monoline sensory icons.
 - `public/assets/orbit.js` – pure orbit geometry; `state.js` – inspection state machine; `atelier.js` – the gallery controller; `site.js` – theme, menu, forms; `styles.css` – all styling and tokens.
 - `api/checkout.js`, `api/session.js`, `api/webhook.js` – Stripe; `api/inquiry.js` – wholesale/contact relay.
-- `scripts/build.mjs` – renders `public/`; `scripts/server.mjs` – local server. `vercel.json` – build + legacy redirects.
+- `scripts/build.mjs` – renders `public/`; `scripts/atlas.mjs` – builds the Origin Atlas SVG from Natural Earth data (public domain, via the `world-atlas` package); `scripts/server.mjs` – local server. `vercel.json` – build + legacy redirects.
 
 ## Routes
 `/` gallery · `/coffee/<slug>/` coffee (static, no JS needed) · `/about/` · `/wholesale/` · `/contact/` · `/success/`. The old Framer product URLs `/wholesale/<slug>` redirect.

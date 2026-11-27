@@ -34,5 +34,5 @@ No animation loop at idle. Only transforms/opacity/clip-path animate. Six 1024 p
 
 ## Sequence and risk
 1. Done: orbit + inspection + detail + theme + routes + modes (Origin/Profile as filters) + About/Wholesale/Contact + legacy redirects.
-2. Next: Origin Atlas map (needs Natural Earth outlines; render to SVG at build), real font licences, verified prices/weights, cart if multi-item orders are wanted.
+2. Done after the first pass: Origin Atlas (Natural Earth 1:110m → Equal Earth → SVG at build time, lazy-loaded, markers as server-rendered buttons). Next: real font licences, verified prices/weights, tablet-specific stage geometry, cart if multi-item orders are wanted.
 3. Rollback: the whole experience is one folder; `git revert` of the atelier commits restores the carousel-only site. Nothing touches the live Framer site.

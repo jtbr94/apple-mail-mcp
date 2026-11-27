@@ -161,7 +161,7 @@ export function catalogueJson(site, coffees, sensory) {
   return `<script type="application/json" id="catalogue">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
 }
 
-export function homePage(site, coffees, sensory) {
+export function homePage(site, coffees, sensory, atlas = null) {
   const n = coffees.length;
   const first = coffees[0];
   const orbit = coffees
@@ -187,8 +187,18 @@ export function homePage(site, coffees, sensory) {
       (c, i) => `<li><a href="/coffee/${esc(c.slug)}/" data-inspect="${esc(c.slug)}"><span class="no">${pad2(i + 1)}</span><span class="rn">${esc(c.name)}</span><span class="muted">${esc(c.origin.region)}, ${esc(c.origin.country)}</span><span class="muted">${esc(c.specs.find(([k]) => k === 'Processing')?.[1] || '')}</span><span class="muted rnotes">${esc(c.notes.slice(0, 3).join(', '))}</span></a></li>`
     )
     .join('');
+  const markers = atlas
+    ? countries
+        .filter((co) => atlas.countries[co])
+        .map((co) => `<button type="button" class="marker" data-marker="${esc(co)}" aria-pressed="false" style="left:${atlas.countries[co].x}%;top:${atlas.countries[co].y}%" aria-label="${esc(co)}: ${coffees.filter((c) => c.origin.country === co).map((c) => c.name).join(', ')}">${UI_ICONS.bean}<span class="marker-label">${esc(co)}</span></button>`)
+        .join('')
+    : '';
+  const atlasHtml = atlas
+    ? `<div class="atlas" data-atlas data-src="/images/atlas.svg" hidden aria-label="Origin atlas"><div class="atlas-frame" style="aspect-ratio:${atlas.viewBox[0]} / ${atlas.viewBox[1]}"><div class="atlas-pan" data-atlas-pan><div class="atlas-map" data-atlas-map></div>${markers}</div></div><p class="atlas-note muted">Region-level markers · outlines Natural Earth</p></div>`
+    : '';
   const body = `
 <section class="scene" data-scene data-state="browsing" aria-label="The collection">
+  ${atlasHtml}
   <div class="stage" data-stage>
     <ol class="indicator" data-indicator aria-hidden="true">${coffees.map((c, i) => `<li ${i === 0 ? 'class="on"' : ''}></li>`).join('')}</ol>
     <div class="plinth" aria-hidden="true"></div>

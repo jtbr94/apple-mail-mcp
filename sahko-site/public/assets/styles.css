@@ -71,7 +71,7 @@ strong { font-weight: 400; }
 
 /* ---------- Scene / stage ---------- */
 .scene { position: relative; height: calc(100dvh - var(--nav-h)); min-height: 560px; overflow: hidden; }
-.stage { position: absolute; inset: 0; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.stage { position: absolute; inset: 0; z-index: 1; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
 .stage.dragging { cursor: grabbing; }
 .indicator { position: absolute; top: 22px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 3; }
 .indicator li { width: 14px; height: 1.5px; background: var(--line); transition: width var(--d-base) var(--ease), background var(--d-base) var(--ease); }
@@ -116,6 +116,24 @@ strong { font-weight: 400; }
 .filter[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
 .filter .sicon { width: 16px; height: 16px; }
 .filter-count { min-height: 1em; }
+
+/* Origin Atlas: sits in the empty band above the bags, outlines only */
+.atlas { position: absolute; left: 50%; top: 48px; transform: translateX(-50%); width: min(40vw, 560px); z-index: 4; color: var(--fg); }
+.atlas-frame { position: relative; overflow: hidden; }
+.atlas-pan { position: absolute; inset: 0; transition: transform 700ms var(--ease); transform-origin: 50% 50%; }
+.atlas-map { position: absolute; inset: 0; opacity: 0.55; }
+.atlas-map svg { width: 100%; height: 100%; display: block; }
+.atlas-origin { pointer-events: all; cursor: pointer; transition: fill 240ms var(--ease), opacity 240ms var(--ease); }
+.atlas-origin:hover { fill: var(--faint); }
+.atlas-origin.is-on { fill: var(--surface); stroke-width: 1.2; }
+.marker { position: absolute; transform: translate(-50%, -50%); z-index: 2; display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px 4px 5px; border: 1px solid var(--faint); border-radius: 999px; background: var(--glass); color: var(--fg); cursor: pointer; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); transition: background 240ms var(--ease), border-color 240ms var(--ease); }
+.marker svg { width: 10px; height: 12px; }
+.marker-label { font-size: 12px; letter-spacing: 0; }
+.marker:hover { border-color: var(--muted); }
+.marker[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.atlas-note { text-align: center; margin-top: 6px; font-size: 11px; letter-spacing: 0; }
+.scene[data-state="entering"] .atlas, .scene[data-state="inspecting"] .atlas { opacity: 0; pointer-events: none; }
+.atlas { transition: opacity var(--d-base) var(--ease); }
 
 /* orbit dims while a bag is inspected */
 .orbit, .plate, .modes, .filters, .arrow, .indicator, .plinth { transition: opacity var(--d-base) var(--ease); }
@@ -237,7 +255,12 @@ strong { font-weight: 400; }
   .plate { right: var(--pad); bottom: 64px; max-width: none; }
   .plate-name { font-size: 28px; }
   .modes { left: var(--pad); right: auto; bottom: var(--pad); }
-  .filters { left: var(--pad); right: var(--pad); transform: none; align-items: flex-start; max-width: none; bottom: 150px; }
+  .filters { left: var(--pad); right: var(--pad); transform: none; align-items: flex-start; max-width: none; bottom: 176px; }
+  .scene.mode-origin .plate, .scene.mode-profile .plate { max-width: none; }
+  .atlas { width: calc(100% - 2 * var(--pad)); top: 40px; }
+  .atlas-note { display: none; }
+  .marker-label { display: none; }
+  .marker { padding: 5px; }
   .filter-row { justify-content: flex-start; }
   .detail { grid-template-columns: 1fr; }
   .detail-media { position: relative; height: auto; min-height: 52vh; border-right: 0; border-bottom: 1px solid var(--line); padding: 48px var(--pad) 56px; top: 0 !important; }

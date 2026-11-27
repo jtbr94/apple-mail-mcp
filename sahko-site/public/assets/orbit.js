@@ -88,7 +88,7 @@ export function layout(phase, n, options = {}) {
 }
 
 // Exponential approach used by the animation loop: returns the next phase.
-export function approach(phase, target, dt, timeConstant = 0.13) {
+export function approach(phase, target, dt, timeConstant = 0.11) {
   const k = 1 - Math.exp(-dt / timeConstant);
   return phase + (target - phase) * k;
 }

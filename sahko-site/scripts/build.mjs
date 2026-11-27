@@ -16,6 +16,8 @@ const out = path.join(root, outName);
 const site = loadSite();
 const coffees = loadCoffees();
 const sensory = JSON.parse(fs.readFileSync(path.join(root, 'data', 'sensory.json'), 'utf8'));
+const atlasFile = path.join(root, 'data', 'atlas.json');
+const atlas = fs.existsSync(atlasFile) ? JSON.parse(fs.readFileSync(atlasFile, 'utf8')) : null;
 if (relative) site.__relative = true;
 if (outName !== 'public') {
   fs.mkdirSync(out, { recursive: true });
@@ -30,7 +32,7 @@ function write(rel, html) {
   console.log('wrote', path.relative(root, file));
 }
 
-const home = homePage(site, coffees, sensory);
+const home = homePage(site, coffees, sensory, atlas);
 write(
   'index.html',
   relative

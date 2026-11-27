@@ -2,10 +2,10 @@
   "name": "sahko-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Sahkō specialty coffee site with Stripe pre-orders",
+  "description": "Sahk\u014d specialty coffee site with Stripe pre-orders",
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "dev": "node scripts/build.mjs && node scripts/server.mjs",
+    "build": "node scripts/atlas.mjs && node scripts/build.mjs",
+    "dev": "npm run build && node scripts/server.mjs",
     "test": "node --test test/*.test.js"
   },
   "engines": {
@@ -14,5 +14,9 @@
   "dependencies": {
     "stripe": "^17.5.0",
     "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
   }
 }
