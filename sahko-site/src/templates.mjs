@@ -35,7 +35,7 @@ export function preorderForm(site, coffee) {
 </form>`;
 }
 
-export function layout(site, { title, description, path, body, bodyClass = '' }) {
+export function layout(site, { title, description, path, body, bodyClass = '', extra = '' }) {
   const fullTitle = title ? `${title} – ${site.brand}` : site.brand;
   const url = `${site.url.replace(/\/+$/, '')}${path}`;
   const current = (href) => (href === '/' ? path === '/' || path.startsWith('/wholesale') : path.startsWith(href));
@@ -70,25 +70,50 @@ export function layout(site, { title, description, path, body, bodyClass = '' })
 <main>
 ${body}
 </main>
+${extra || ''}
 <script src="/assets/site.js" defer></script>
+<script src="/assets/carousel.js" defer></script>
+<script type="importmap">{"imports":{"three":"/assets/vendor/three.module.js"}}</script>
+${site.bags?.enabled ? '<script type="module" src="/assets/bags.js"></script>' : ''}
 </body>
 </html>`;
 }
 
+export function bagData(site, coffees) {
+  const data = {
+    paperColor: site.bags?.paperColor || '#ebe7df',
+    labelColor: site.bags?.labelColor || '#f7f5f3',
+    brand: site.brand,
+    coffees: Object.fromEntries(
+      coffees.map((c) => [
+        c.slug,
+        {
+          name: c.name,
+          specs: c.specs,
+          lot: c.lot,
+          model: c.model || '',
+          image: c.images.bag,
+        },
+      ])
+    ),
+  };
+  return `<script type="application/json" id="bag-data">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
+}
+
 export function homePage(site, coffees) {
-  const rows = coffees
+  const n = coffees.length;
+  const slides = coffees
     .map(
-      (c) => `
-<section class="coffee" id="${esc(c.slug)}">
+      (c, i) => `
+<section class="coffee slide" id="${esc(c.slug)}" data-slug="${esc(c.slug)}" data-index="${i}" aria-roledescription="slide" aria-label="${i + 1} of ${n}: ${esc(c.name)}">
   <header class="head">
     <h1 class="title">${esc(c.name)}</h1>
     ${pills(c.tags)}
-    <button class="toggle" type="button" aria-expanded="false" aria-controls="body-${esc(c.slug)}" aria-label="Show details for ${esc(c.name)}"><span aria-hidden="true">+</span></button>
   </header>
-  <a class="media" href="/wholesale/${esc(c.slug)}/" aria-label="${esc(c.name)} details">
-    <img src="${esc(c.images.bag)}" width="1024" height="1024" alt="${esc(c.name)} 1kg bag" loading="lazy" decoding="async">
-  </a>
-  <div class="body" id="body-${esc(c.slug)}">
+  <div class="media" data-bag="${esc(c.slug)}">
+    <img class="fallback" src="${esc(c.images.bag)}" width="1024" height="1024" alt="${esc(c.name)} 1kg bag" loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async">
+  </div>
+  <div class="body">
     ${specs(c)}
     <p class="more"><a href="/wholesale/${esc(c.slug)}/">Learn More</a></p>
     ${preorderForm(site, c)}
@@ -96,14 +121,29 @@ export function homePage(site, coffees) {
 </section>`
     )
     .join('\n');
-  return layout(site, { title: '', description: site.tagline, path: '/', body: `<div class="list">${rows}</div>`, bodyClass: 'home' });
+  const tabs = coffees
+    .map((c, i) => `<button type="button" class="tab" data-goto="${i}" ${i === 0 ? 'aria-current="true"' : ''}>${esc(c.name)}</button>`)
+    .join('');
+  const body = `
+<div class="carousel" data-carousel>
+  <div class="track" data-track aria-roledescription="carousel" aria-label="Our coffees" tabindex="0">${slides}</div>
+</div>`;
+  const extra = `
+<div class="bar" data-bar>
+  <button type="button" class="arrow" data-prev aria-label="Previous coffee">←</button>
+  <div class="tabs" role="tablist" aria-label="Coffees">${tabs}</div>
+  <p class="counter" data-counter aria-live="polite"><span data-current-name>${esc(coffees[0].name)}</span> <span class="muted" data-count>1 / ${n}</span></p>
+  <button type="button" class="arrow" data-next aria-label="Next coffee">→</button>
+</div>
+${bagData(site, coffees)}`;
+  return layout(site, { title: '', description: site.tagline, path: '/', body, bodyClass: 'home', extra });
 }
 
 export function coffeePage(site, c) {
   const body = `
 <article class="product" id="${esc(c.slug)}">
   <div class="product-media">
-    <figure class="cell"><img src="${esc(c.images.bag)}" width="1024" height="1024" alt="${esc(c.name)} 1kg bag" decoding="async"></figure>
+    <figure class="cell media" data-bag="${esc(c.slug)}"><img class="fallback" src="${esc(c.images.bag)}" width="1024" height="1024" alt="${esc(c.name)} 1kg bag" decoding="async"></figure>
     <figure class="cell"><img src="${esc(c.images.beans)}" width="1024" height="1024" alt="${esc(c.name)} roasted beans" loading="lazy" decoding="async"></figure>
   </div>
   <div class="product-info">
@@ -121,6 +161,7 @@ export function coffeePage(site, c) {
     path: `/wholesale/${c.slug}/`,
     body,
     bodyClass: 'product-page',
+    extra: bagData(site, [c]),
   });
 }
 

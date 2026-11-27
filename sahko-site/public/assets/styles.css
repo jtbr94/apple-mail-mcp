@@ -166,6 +166,7 @@ strong { font-weight: 400; }
 .section .preorder { margin-top: 0; }
 .preorder-title { color: var(--fg-66); }
 .sizes { display: flex; flex-wrap: wrap; gap: 6px; }
+.size { position: relative; display: inline-flex; }
 .size input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
 .pill-button { cursor: pointer; color: var(--fg); background: transparent; transition: background 0.15s, border-color 0.15s; }
 .size input:checked + .pill-button { background: var(--fg); color: var(--bg); border-color: var(--fg); }
@@ -287,3 +288,120 @@ strong { font-weight: 400; }
   .preorder-row { flex-wrap: wrap; }
   .button { flex-basis: 100%; }
 }
+
+/* ===== Carousel (home) ===== */
+:root { --bar-h: 44px; }
+.home main { padding-bottom: var(--bar-h); }
+.carousel { position: relative; }
+.track {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  outline: none;
+}
+.track::-webkit-scrollbar { display: none; }
+.track .slide {
+  scroll-margin-top: var(--nav-h);
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  border-bottom: 0;
+}
+.track .coffee { min-height: calc(100dvh - var(--nav-h) - var(--bar-h)); height: calc(100dvh - var(--nav-h) - var(--bar-h)); }
+.track .coffee .body { overflow-y: auto; max-height: 100%; }
+.track .coffee + .coffee { border-left: 1px solid var(--line); }
+
+/* Bottom bar: arrows, coffee tabs, counter */
+.bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 10;
+  height: var(--bar-h);
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0 var(--pad);
+  border-top: 1px solid var(--line);
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.arrow {
+  width: 32px; height: 32px;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--fg);
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+.arrow:hover { background: var(--line-soft); }
+.arrow[disabled] { opacity: 0.3; cursor: default; }
+.tabs { display: flex; gap: 14px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--fg-66);
+  font: inherit;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  cursor: pointer;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.tab:hover { color: var(--fg); }
+.tab[aria-current="true"] { color: var(--fg); text-decoration: underline; }
+.counter { display: none; white-space: nowrap; }
+.muted { color: var(--fg-66); }
+
+/* ===== 3D bags ===== */
+.bag-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.media { position: relative; touch-action: pan-y; }
+.media[data-bag] { cursor: grab; user-select: none; -webkit-user-select: none; }
+.media[data-bag].dragging { cursor: grabbing; }
+.media .fallback { transition: opacity 0.4s; }
+.has-3d .media[data-bag] .fallback { opacity: 0; }
+.media .hint {
+  position: absolute;
+  left: var(--pad);
+  bottom: var(--pad);
+  color: var(--fg-66);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.has-3d .media .hint { opacity: 1; }
+.has-3d .media.dragged .hint { opacity: 0; }
+
+@media (max-width: 809.98px) {
+  .track .coffee {
+    height: auto;
+    min-height: calc(100dvh - var(--nav-h) - var(--bar-h));
+    grid-template-areas: "head" "media" "body";
+  }
+  .track .coffee .head { position: static; background: transparent; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .track .coffee .body { display: block; overflow: visible; max-height: none; border-top: 1px solid var(--line); }
+  .track .coffee .media { height: min(92vw, 520px); padding: 12px var(--pad); }
+  .track .coffee .media img { height: 100%; width: auto; }
+  .bar { grid-template-columns: auto 1fr auto; }
+  .tabs { display: none; }
+  .counter { display: block; text-align: center; }
+}
+
+@media (hover: none) { .media .hint { display: none; } }

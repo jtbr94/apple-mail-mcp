@@ -60,7 +60,8 @@
         "stripePriceId": "",
         "paymentLink": ""
       }
-    ]
+    ],
+    "model": ""
   },
   {
     "slug": "minas",
@@ -123,7 +124,8 @@
         "stripePriceId": "",
         "paymentLink": ""
       }
-    ]
+    ],
+    "model": ""
   },
   {
     "slug": "cauca",
@@ -187,7 +189,8 @@
         "stripePriceId": "",
         "paymentLink": ""
       }
-    ]
+    ],
+    "model": ""
   },
   {
     "slug": "antigua",
@@ -250,7 +253,8 @@
         "stripePriceId": "",
         "paymentLink": ""
       }
-    ]
+    ],
+    "model": ""
   },
   {
     "slug": "guji",
@@ -314,7 +318,8 @@
         "stripePriceId": "",
         "paymentLink": ""
       }
-    ]
+    ],
+    "model": ""
   },
   {
     "slug": "yirgacheffe",
@@ -378,6 +383,7 @@
         "stripePriceId": "",
         "paymentLink": ""
       }
-    ]
+    ],
+    "model": ""
   }
 ]

@@ -8,8 +8,11 @@
     "dev": "node scripts/build.mjs && node scripts/server.mjs",
     "test": "node --test test/*.test.js"
   },
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "stripe": "^17.5.0"
+    "stripe": "^17.5.0",
+    "three": "^0.187.0"
   }
 }

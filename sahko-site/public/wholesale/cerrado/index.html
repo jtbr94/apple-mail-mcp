@@ -28,7 +28,7 @@
 
 <article class="product" id="cerrado">
   <div class="product-media">
-    <figure class="cell"><img src="/images/cerrado-bag.png" width="1024" height="1024" alt="Cerrado 1kg bag" decoding="async"></figure>
+    <figure class="cell media" data-bag="cerrado"><img class="fallback" src="/images/cerrado-bag.png" width="1024" height="1024" alt="Cerrado 1kg bag" decoding="async"></figure>
     <figure class="cell"><img src="/images/cerrado-beans.png" width="1024" height="1024" alt="Cerrado roasted beans" loading="lazy" decoding="async"></figure>
   </div>
   <div class="product-info">
@@ -55,6 +55,10 @@
   </div>
 </article>
 </main>
+<script type="application/json" id="bag-data">{"paperColor":"#ebe7df","labelColor":"#f7f5f3","brand":"Sahkō","coffees":{"cerrado":{"name":"Cerrado","specs":[["Region","Cerrado, Minas Gerais, Brazil"],["Varietal","Mundo Novo, Catuai Red & Yellow, Topazio, Catucai, Acaia"],["Altitude","1,200 masl"],["Processing","Natural"],["Harvest","Jul–Sep 2025"],["Acidity","Medium"],["Body","Light"],["Roast","Full City"]],"lot":"CER01N–25","model":"","image":"/images/cerrado-bag.png"}}}</script>
 <script src="/assets/site.js" defer></script>
+<script src="/assets/carousel.js" defer></script>
+<script type="importmap">{"imports":{"three":"/assets/vendor/three.module.js"}}</script>
+<script type="module" src="/assets/bags.js"></script>
 </body>
 </html>

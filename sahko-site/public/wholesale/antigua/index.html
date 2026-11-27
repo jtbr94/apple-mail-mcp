@@ -28,7 +28,7 @@
 
 <article class="product" id="antigua">
   <div class="product-media">
-    <figure class="cell"><img src="/images/antigua-bag.png" width="1024" height="1024" alt="Antigua 1kg bag" decoding="async"></figure>
+    <figure class="cell media" data-bag="antigua"><img class="fallback" src="/images/antigua-bag.png" width="1024" height="1024" alt="Antigua 1kg bag" decoding="async"></figure>
     <figure class="cell"><img src="/images/antigua-beans.png" width="1024" height="1024" alt="Antigua roasted beans" loading="lazy" decoding="async"></figure>
   </div>
   <div class="product-info">
@@ -55,6 +55,10 @@
   </div>
 </article>
 </main>
+<script type="application/json" id="bag-data">{"paperColor":"#ebe7df","labelColor":"#f7f5f3","brand":"Sahkō","coffees":{"antigua":{"name":"Antigua","specs":[["Region","San Cristobal el Bajo, Antigua, Guatemala"],["Varietal","Bourbon"],["Altitude","1,550–1,580 masl"],["Processing","Washed"],["Harvest","Mar 2025"],["Acidity","Mild, malic, with green apple lift"],["Body","Medium"],["Roast","City+"]],"lot":"ANT02W–25","model":"","image":"/images/antigua-bag.png"}}}</script>
 <script src="/assets/site.js" defer></script>
+<script src="/assets/carousel.js" defer></script>
+<script type="importmap">{"imports":{"three":"/assets/vendor/three.module.js"}}</script>
+<script type="module" src="/assets/bags.js"></script>
 </body>
 </html>

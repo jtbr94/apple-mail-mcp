@@ -9,6 +9,17 @@ No framework, no build tooling beyond Node itself:
 - `api/` holds three serverless functions (Vercel-style `(req, res)` handlers) that talk to Stripe.
 - `scripts/server.mjs` runs the static site and the API together locally.
 
+## Animations and 3D bags
+
+The home page is a horizontal carousel: one coffee per screen, snap-gliding between them with the arrows in the bottom bar, the coffee names, the arrow keys, a mouse wheel, a trackpad swipe or a finger. The URL hash follows along (`/#guji`), so every coffee is deep-linkable.
+
+Each coffee's bag is a 3D object rendered with Three.js, not a photo. The bag is built procedurally (a pillow-shaped pouch with a paper material and a heat seal) and its label is drawn live from the coffee's data (brand, name, region, varietal, process, harvest, acidity, body, lot). When a coffee glides into view the bag "digitises": a wireframe mesh fills in from the bottom with a scan line and a dithered edge, then settles. Bags sway slowly, tilt toward the pointer, and can be dragged to turn.
+
+- Real models: put a `.glb` in `public/models/` and set `"model": "/models/cerrado.glb"` on that coffee. It replaces the procedural bag and still gets the digitise reveal.
+- Colours: `bags.paperColor` and `bags.labelColor` in `site.json`.
+- Fallbacks: devices without WebGL, and visitors who prefer reduced motion, see the still photo and no sweep. Touch devices swipe the carousel instead of rotating the bag.
+- Turn it off: `bags.enabled: false` in `site.json` goes back to photos. All six bags share one WebGL canvas, so the cost is one context, not six.
+
 ## Run it locally
 
 ```bash
@@ -49,6 +60,18 @@ vercel --prod
 `vercel.json` already sets the build command and output directory. Then, in the Stripe dashboard under Developers → Webhooks, add an endpoint for `https://<your-domain>/api/webhook` listening to `checkout.session.completed`, and copy its signing secret into `STRIPE_WEBHOOK_SECRET`.
 
 To test webhooks locally: `stripe listen --forward-to localhost:3000/api/webhook`.
+
+### Pointing the Squarespace domain at Vercel
+
+The domain stays registered at Squarespace; only its DNS records change.
+
+1. In Vercel, open the project → Settings → Domains and add both `sahkocoffee.com` and `www.sahkocoffee.com`. Vercel shows the records it expects.
+2. In Squarespace, open Domains → sahkocoffee.com → DNS settings and remove the Framer records (the `A` records for `@` and the `CNAME` for `www` that point at Framer).
+3. Add the Vercel records: an `A` record for `@` pointing at `76.76.21.21`, and a `CNAME` for `www` pointing at `cname.vercel-dns.com`. Keep any `MX` or `TXT` records you have for email.
+4. Wait for Vercel to show both domains as verified (usually minutes, sometimes an hour). Vercel issues the HTTPS certificate itself.
+5. Set `SITE_URL` to `https://www.sahkocoffee.com` so Stripe's success and cancel links use the real domain, then redeploy.
+
+Only cancel the Framer plan once the new domain is serving this site. Framer-hosted pages will stop at that point, and this folder is now the source of truth for the content.
 
 ## Editing content and prices
 
