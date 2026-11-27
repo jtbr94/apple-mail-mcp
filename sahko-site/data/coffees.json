@@ -1,0 +1,469 @@
+[
+  {
+    "slug": "cerrado",
+    "name": "Cerrado",
+    "tags": [
+      "Natural",
+      "Single Origin"
+    ],
+    "specs": [
+      [
+        "Region",
+        "Cerrado, Minas Gerais, Brazil"
+      ],
+      [
+        "Varietal",
+        "Mundo Novo, Catuai Red & Yellow, Topazio, Catucai, Acaia"
+      ],
+      [
+        "Altitude",
+        "1,200 masl"
+      ],
+      [
+        "Processing",
+        "Natural"
+      ],
+      [
+        "Harvest",
+        "Jul–Sep 2025"
+      ],
+      [
+        "Acidity",
+        "Medium"
+      ],
+      [
+        "Body",
+        "Light"
+      ],
+      [
+        "Roast",
+        "Full City"
+      ]
+    ],
+    "description": "A sun-grown natural from the Cerrado plateau. Smallholder lots cultivated on deep, well-drained latosol soils across savannah terrain. Defined wet and dry seasons and abundant sunlight allow uniform on-tree maturation and clean patio drying with fruit intact. Medium acidity, light body, clean natural profile that anchors espresso or rounds out a filter blend.",
+    "tastingNotes": "Cocoa, Sultana, Almond, Demerara",
+    "lot": "CER01N–25",
+    "images": {
+      "bag": "/images/cerrado-bag.png",
+      "beans": "/images/cerrado-beans.png"
+    },
+    "offers": [
+      {
+        "size": "250g",
+        "amount": 1800,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      },
+      {
+        "size": "1kg",
+        "amount": 5600,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      }
+    ],
+    "origin": {
+      "country": "Brazil",
+      "region": "Cerrado, Minas Gerais"
+    },
+    "intro": "A clean, sun-dried natural that anchors espresso or rounds out a filter blend.",
+    "notes": [
+      "Cocoa",
+      "Sultana",
+      "Almond",
+      "Demerara"
+    ]
+  },
+  {
+    "slug": "minas",
+    "name": "Minas",
+    "tags": [
+      "Natural",
+      "Single Origin"
+    ],
+    "specs": [
+      [
+        "Region",
+        "Sul de Minas, Minas Gerais, Brazil"
+      ],
+      [
+        "Varietal",
+        "Mundo Novo, Yellow Catuai, Topazio, Acaia"
+      ],
+      [
+        "Altitude",
+        "950–1,120 masl"
+      ],
+      [
+        "Processing",
+        "Natural, dried on cherry"
+      ],
+      [
+        "Harvest",
+        "Sep 2025"
+      ],
+      [
+        "Acidity",
+        "Very mild, citric"
+      ],
+      [
+        "Body",
+        "Creamy, Medium"
+      ],
+      [
+        "Roast",
+        "Full City"
+      ]
+    ],
+    "description": "A natural lot from the southern highlands of Minas Gerais, Brazil. Cherries dried whole on patios after harvest at peak ripeness, on the granitic and gneissic soils typical of the region. A tropical semi-humid climate with a long dry season supports slow, even drying. Very mild citric acidity, creamy medium body, soft mouthfeel.",
+    "tastingNotes": "Hazelnut, Dulce de leche, Cocoa, Honey, Date",
+    "lot": "MIN01N–25",
+    "images": {
+      "bag": "/images/minas-bag.png",
+      "beans": "/images/minas-beans.png"
+    },
+    "offers": [
+      {
+        "size": "250g",
+        "amount": 1800,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      },
+      {
+        "size": "1kg",
+        "amount": 5600,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      }
+    ],
+    "origin": {
+      "country": "Brazil",
+      "region": "Sul de Minas, Minas Gerais"
+    },
+    "intro": "A creamy natural dried on the cherry, soft and sweet.",
+    "notes": [
+      "Hazelnut",
+      "Dulce de leche",
+      "Cocoa",
+      "Honey",
+      "Date"
+    ]
+  },
+  {
+    "slug": "cauca",
+    "name": "Cauca",
+    "tags": [
+      "Washed",
+      "Single Origin",
+      "Organic"
+    ],
+    "specs": [
+      [
+        "Region",
+        "Cauca, Colombia"
+      ],
+      [
+        "Varietal",
+        "Caturra, Bourbon, Castillo"
+      ],
+      [
+        "Altitude",
+        "1,500–2,000 masl"
+      ],
+      [
+        "Processing",
+        "Washed"
+      ],
+      [
+        "Harvest",
+        "Sep–Nov 2025"
+      ],
+      [
+        "Acidity",
+        "Mild"
+      ],
+      [
+        "Body",
+        "Medium"
+      ],
+      [
+        "Roast",
+        "City+"
+      ]
+    ],
+    "description": "A high-altitude washed lot from the Andean highlands of Cauca, Colombia. Grown by indigenous smallholders on volcanic soils between 1,500 and 2,000 meters, shade-grown in traditional polyculture. Bimodal rainfall and cool mountain nights slow cherry maturation. Mild acidity, medium body, a clean washed profile that holds up across filter methods.",
+    "tastingNotes": "Cacao nibs, Pineapple, Panela, Hibiscus, Meyer lemon, Pomelo",
+    "lot": "CAU01W–25",
+    "images": {
+      "bag": "/images/cauca-bag.png",
+      "beans": "/images/cauca-beans.png"
+    },
+    "offers": [
+      {
+        "size": "250g",
+        "amount": 1800,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      },
+      {
+        "size": "1kg",
+        "amount": 5600,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      }
+    ],
+    "origin": {
+      "country": "Colombia",
+      "region": "Cauca"
+    },
+    "intro": "A high-altitude washed lot, clean across filter methods.",
+    "notes": [
+      "Cacao nibs",
+      "Pineapple",
+      "Panela",
+      "Hibiscus",
+      "Meyer lemon",
+      "Pomelo"
+    ]
+  },
+  {
+    "slug": "antigua",
+    "name": "Antigua",
+    "tags": [
+      "Washed",
+      "Single Origin"
+    ],
+    "specs": [
+      [
+        "Region",
+        "San Cristobal el Bajo, Antigua, Guatemala"
+      ],
+      [
+        "Varietal",
+        "Bourbon"
+      ],
+      [
+        "Altitude",
+        "1,550–1,580 masl"
+      ],
+      [
+        "Processing",
+        "Washed"
+      ],
+      [
+        "Harvest",
+        "Mar 2025"
+      ],
+      [
+        "Acidity",
+        "Mild, malic, with green apple lift"
+      ],
+      [
+        "Body",
+        "Medium"
+      ],
+      [
+        "Roast",
+        "City+"
+      ]
+    ],
+    "description": "A washed Bourbon from a single estate in Antigua, Guatemala. Old Bourbon cultivars grown under partial shade from grevillea and avocado, on volcanic soils shaped by Acatenango, Fuego, and Agua. Warm days, cool nights, and seasonal high winds define the microclimate. Cherries fermented in water for 24 to 36 hours, then dried 6 to 9 days on patios, with each day-lot cupped and separated by profile. Mild malic acidity, soft milky mouthfeel, medium body.",
+    "tastingNotes": "Demerara, Lavender, Cocoa, Granny Smith, Vanilla bean, Shortbread",
+    "lot": "ANT02W–25",
+    "images": {
+      "bag": "/images/antigua-bag.png",
+      "beans": "/images/antigua-beans.png"
+    },
+    "offers": [
+      {
+        "size": "250g",
+        "amount": 1800,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      },
+      {
+        "size": "1kg",
+        "amount": 5600,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      }
+    ],
+    "origin": {
+      "country": "Guatemala",
+      "region": "San Cristobal el Bajo, Antigua"
+    },
+    "intro": "A classic washed Bourbon with a green-apple lift.",
+    "notes": [
+      "Demerara",
+      "Lavender",
+      "Cocoa",
+      "Granny Smith",
+      "Vanilla bean",
+      "Shortbread"
+    ]
+  },
+  {
+    "slug": "guji",
+    "name": "Guji",
+    "tags": [
+      "Organic",
+      "Washed",
+      "Single Origin"
+    ],
+    "specs": [
+      [
+        "Region",
+        "Uraga, Guji Zone, Oromia, Ethiopia"
+      ],
+      [
+        "Varietal",
+        "JARC selections 74110, 74112"
+      ],
+      [
+        "Altitude",
+        "2,000–2,150 masl"
+      ],
+      [
+        "Processing",
+        "Washed, raised African-bed dried"
+      ],
+      [
+        "Harvest",
+        "Dec 2025–Jan 2026"
+      ],
+      [
+        "Acidity",
+        "Bright"
+      ],
+      [
+        "Body",
+        "Light"
+      ],
+      [
+        "Roast",
+        "City"
+      ]
+    ],
+    "description": "A washed Grade 2 from the Guji highlands of southern Ethiopia. JARC selections grown as garden coffee on rich loamy soil in the hills of Uraga, at 2,000 to 2,150 meters where cool highland temperatures slow cherry development and concentrate sugars. Cherries hand-sorted at intake, traditional washed processing, sun-dried on raised beds under shade. The 74110 and 74112 selections are bred for coffee berry disease resistance and express best through filter brewing. USDA Organic certified.",
+    "tastingNotes": "Yellow apricot, Passion fruit, Persian lime, Hibiscus, Earl Grey",
+    "lot": "GUJ01W-25",
+    "images": {
+      "bag": "/images/guji-bag.png",
+      "beans": "/images/guji-beans.png"
+    },
+    "offers": [
+      {
+        "size": "250g",
+        "amount": 1800,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      },
+      {
+        "size": "1kg",
+        "amount": 5600,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      }
+    ],
+    "origin": {
+      "country": "Ethiopia",
+      "region": "Uraga, Guji Zone, Oromia"
+    },
+    "intro": "A bright washed Ethiopian built for filter brewing.",
+    "notes": [
+      "Yellow apricot",
+      "Passion fruit",
+      "Persian lime",
+      "Hibiscus",
+      "Earl Grey"
+    ]
+  },
+  {
+    "slug": "yirgacheffe",
+    "name": "Yirgacheffe",
+    "tags": [
+      "Organic",
+      "Washed",
+      "Single Origin"
+    ],
+    "specs": [
+      [
+        "Region",
+        "Yirgacheffe, Gedeo Zone, Ethiopia"
+      ],
+      [
+        "Varietal",
+        "Ethiopian heirloom (Kurmue, Dago, Wolisho)"
+      ],
+      [
+        "Altitude",
+        "1,800–2,200 masl"
+      ],
+      [
+        "Processing",
+        "Washed, raised African-bed dried"
+      ],
+      [
+        "Harvest",
+        "Nov 2025–Jan 2026"
+      ],
+      [
+        "Acidity",
+        "Bright"
+      ],
+      [
+        "Body",
+        "Light"
+      ],
+      [
+        "Roast",
+        "City"
+      ]
+    ],
+    "description": "A washed Grade 1 from the Gedeo highlands of southern Ethiopia. Heirloom selections grown on fertile red-brown clay under native enset, albizia, acacia, and millettia shade. Cherries hand-sorted at intake, disc-pulped, fermented under water for 36 to 48 hours, soaked a further 6 to 8 hours, then dried on raised beds for 6 to 7 days. USDA Organic certified.",
+    "tastingNotes": "Jasmine, Bergamot, Honeydew, Lychee, Hibiscus, Earl Grey",
+    "lot": "YRG01W–25",
+    "images": {
+      "bag": "/images/yirgacheffe-bag.png",
+      "beans": "/images/yirgacheffe-beans.png"
+    },
+    "offers": [
+      {
+        "size": "250g",
+        "amount": 1800,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      },
+      {
+        "size": "1kg",
+        "amount": 5600,
+        "stripePriceId": "",
+        "paymentLink": "",
+        "availability": "preorder"
+      }
+    ],
+    "origin": {
+      "country": "Ethiopia",
+      "region": "Yirgacheffe, Gedeo Zone"
+    },
+    "intro": "A floral washed heirloom from Gedeo.",
+    "notes": [
+      "Jasmine",
+      "Bergamot",
+      "Honeydew",
+      "Lychee",
+      "Hibiscus",
+      "Earl Grey"
+    ]
+  }
+]

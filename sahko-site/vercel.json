@@ -1,0 +1,37 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/wholesale/cerrado",
+      "destination": "/coffee/cerrado/",
+      "permanent": true
+    },
+    {
+      "source": "/wholesale/minas",
+      "destination": "/coffee/minas/",
+      "permanent": true
+    },
+    {
+      "source": "/wholesale/cauca",
+      "destination": "/coffee/cauca/",
+      "permanent": true
+    },
+    {
+      "source": "/wholesale/antigua",
+      "destination": "/coffee/antigua/",
+      "permanent": true
+    },
+    {
+      "source": "/wholesale/guji",
+      "destination": "/coffee/guji/",
+      "permanent": true
+    },
+    {
+      "source": "/wholesale/yirgacheffe",
+      "destination": "/coffee/yirgacheffe/",
+      "permanent": true
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "brand": "Sahkō",
+  "tagline": "Specialty Coffee",
+  "url": "https://www.sahkocoffee.com",
+  "currency": "usd",
+  "locale": "en-US",
+  "nav": [
+    {
+      "label": "Collection",
+      "href": "/"
+    },
+    {
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "Wholesale",
+      "href": "/wholesale/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
+  ],
+  "preorder": {
+    "enabled": true,
+    "headline": "Pre-order",
+    "shipsNote": "Pre-orders roast to order and ship within 10 days of the order date.",
+    "checkoutMessage": "This is a pre-order. Your coffee is roasted after the order closes and ships within 10 days.",
+    "maxQuantity": 20,
+    "shippingCountries": [
+      "US",
+      "CA"
+    ]
+  },
+  "information": {
+    "about": "Sahkō sources and roasts single-origin specialty coffee for cafés, restaurants and people who care how their coffee was grown.",
+    "email": "hello@sahkocoffee.com",
+    "wholesale": "For wholesale pricing, samples and standing orders, email us with your volumes and roast preferences.",
+    "address": ""
+  },
+  "pricesVerified": false,
+  "experienceName": "The Coffee Atelier",
+  "positioning": "The art of origin.",
+  "about": {
+    "photo": "/images/about-harvest.jpg",
+    "photoAlt": "A picker reaching into coffee trees, from the Sahkō brand file",
+    "photoVerified": false,
+    "paragraphs": [
+      "Sahkō roasts single-origin coffee in small lots and publishes what it knows about each one: region, varietal, altitude, process, harvest, acidity, body, roast and lot number.",
+      "The collection is short on purpose. Six coffees, each chosen for a character that survives the roast and reads clearly in the cup."
+    ]
+  },
+  "wholesale": {
+    "intro": "For cafés, restaurants and retail partners. Tell us about your volumes, equipment and the profiles you pour and we will reply with samples and current availability.",
+    "email": "hello@sahkocoffee.com"
+  }
+}
